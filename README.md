@@ -32,35 +32,40 @@ pnpm add tzlocator
 #### Single page application
 
 ```ts
-import { tzlocator } from "tzlocator"
+import { getTzlocator, getBrowserTimezone } from "tzlocator"
+
 // returns the browser's timezone, e.g. "Europe/London"
-const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+const timezone = getBrowserTimezone()
+
+// returns an instance of tzlocator
+const tzlocator = getTzlocator("Europe/London" /* optional fallback timezone */)
 const timezoneData = tzlocator.get(timezone)
 ```
 
 #### Server side rendering
 
 ```ts
-// returns the browser's timezone, e.g. "Europe/London"
-const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+import { getBrowserTimezone } from "tzlocator"
+
+const timezone = getBrowserTimezone()
+
+// send the timezone to the server
 document.cookie = `timezone=${timezone};`
 ```
 
 ### Server
 
 ```ts
-import { tzlocator } from "tzlocator"
-// assuming you sent the browser's timezone in the cookie header
+import { getTzlocator } from "tzlocator"
+
+const tzlocator = getTzlocator()
+
 function getTimezoneData(request: Request) {
+	// retrieves the browser's timezone from a cookie
 	const cookies = getRequestCookies(request)
 	return tzlocator.get(cookies.timezone)
 }
 ```
-
-## Contributing
-
-1.  Dynamically import `tzlocator.json` and make its instanciation (currently `tzlocator`) a function.
-2.  Create a `getBrowserTimezone` utility function to replace `Intl.DateTimeFormat().resolvedOptions().timeZone`.
 
 ## Thanks
 
