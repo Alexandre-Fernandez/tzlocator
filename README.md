@@ -1,6 +1,6 @@
 # tzlocator
 
-> Lightweight privacy respecting geolocalisation library with no dependencies.
+> Lightweight privacy respecting geolocation library with no dependencies.
 
 ## Key features
 
