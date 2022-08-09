@@ -7,7 +7,7 @@ import type {
 	Timezone,
 } from "../input"
 
-export type Geotimezone = {
+export type Timezones = {
 	[key in Timezone]: {
 		country: {
 			code: CountryCode
@@ -22,7 +22,7 @@ export type Geotimezone = {
 	}
 }
 
-export type TimezoneData = Geotimezone[Timezone]
+export type TimezoneData = Timezones[Timezone]
 
 export type { Timezone } from "../input"
 

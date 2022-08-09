@@ -1,11 +1,11 @@
-import GeotimezoneMap from "./classes/GeotimezoneMap"
+import Tzlocator from "./classes/Tzlocator"
 import geotimezoneJson from "./static/geotimezone.json"
 export type {
-	Geotimezone,
+	Timezones,
 	TimezoneData,
 	Timezone,
 	Country,
 	Currency,
 } from "./types/output"
 
-export const geotimezone = new GeotimezoneMap(geotimezoneJson as any)
+export const geotimezone = new Tzlocator(geotimezoneJson as any)

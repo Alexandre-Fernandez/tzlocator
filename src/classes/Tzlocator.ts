@@ -1,19 +1,15 @@
-import type {
-	Geotimezone as GeotimezoneJson,
-	Timezone,
-	TimezoneData,
-} from "../types/output"
+import type { Timezones, Timezone, TimezoneData } from "../types/output"
 import type { LiteralUnion } from "../types/utilities"
 
-class GeotimezoneMap {
+class Tzlocator {
 	private fallback: TimezoneData | undefined
 
-	constructor(private geotimezone: GeotimezoneJson, fallback?: Timezone) {
+	constructor(private timezonesMap: Timezones, fallback?: Timezone) {
 		if (fallback) this.fallback = this.get(fallback)
 	}
 
 	has(timezone: LiteralUnion<Timezone>) {
-		return !!this.geotimezone[timezone as Timezone]
+		return !!this.timezonesMap[timezone as Timezone]
 	}
 
 	/**
@@ -23,7 +19,7 @@ class GeotimezoneMap {
 	 * undefined.
 	 */
 	get(timezone: LiteralUnion<Timezone>): TimezoneData | undefined {
-		return this.geotimezone[timezone as Timezone] || this.fallback
+		return this.timezonesMap[timezone as Timezone] || this.fallback
 	}
 
 	/**
@@ -32,20 +28,20 @@ class GeotimezoneMap {
 	 * its `timezone` as a key.
 	 */
 	filter(predicate: (data: TimezoneData, timezone: Timezone) => boolean) {
-		return Object.entries(this.geotimezone).reduce((prev, entry) => {
+		return Object.entries(this.timezonesMap).reduce((prev, entry) => {
 			const [timezone, data] = entry as [Timezone, TimezoneData]
 			if (predicate(data, timezone)) prev[timezone] = data
 			return prev
-		}, {} as Partial<GeotimezoneJson>)
+		}, {} as Partial<Timezones>)
 	}
 
 	timezones() {
-		return Object.keys(this.geotimezone) as Timezone[]
+		return Object.keys(this.timezonesMap) as Timezone[]
 	}
 
 	toJSON() {
-		return JSON.stringify(this.geotimezone)
+		return JSON.stringify(this.timezonesMap)
 	}
 }
 
-export default GeotimezoneMap
+export default Tzlocator

@@ -6,7 +6,7 @@ import {
 	assertIsCurrencyDataArray,
 	assertIsTimezoneCountryCodeArray,
 } from "../functions/assertions"
-import type { Geotimezone } from "../types/output"
+import type { Timezones } from "../types/output"
 import { writeFileSync } from "fs"
 import paths from "../paths"
 
@@ -14,7 +14,7 @@ assertIsTimezoneCountryCodeArray(countryTimezones)
 assertIsCountryDataArray(countries)
 assertIsCurrencyDataArray(currencies)
 
-const timezoneData = {} as Geotimezone
+const timezoneData = {} as Timezones
 for (const countryTimezone of countryTimezones) {
 	const country = countries.find(
 		c => c.countryCode === countryTimezone.countryCode
