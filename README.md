@@ -4,8 +4,9 @@
 
 ## Key features
 
--   🥂 No subscription (unlike GeoIP)
+-   🥂 No third-party API calls
 -   👀 Works without browser prompt
+-   🪙 No reverse IP lookups
 -   🌏 Country and currency data
 -   🔒 Privacy respecting
 -   🪶 Lightweight with no dependencies
