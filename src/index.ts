@@ -1,5 +1,11 @@
 import Tzlocator from "./classes/Tzlocator"
-import tzlocatorJson from "./static/tzlocator.json"
+import type { Timezone } from "./types/input"
+
+export const getTzlocator = async (fallback?: Timezone) =>
+	new Tzlocator((await import("./static/tzlocator.json")) as any, fallback)
+
+export { getBrowserTimezone } from "./functions/utilities"
+
 export type {
 	Timezones,
 	TimezoneData,
@@ -7,5 +13,3 @@ export type {
 	Country,
 	Currency,
 } from "./types/output"
-
-export const tzlocator = new Tzlocator(tzlocatorJson as any)

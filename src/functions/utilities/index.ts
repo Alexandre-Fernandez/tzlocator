@@ -3,3 +3,21 @@ export function getExtension(path: string) {
 	if (index < 0) return undefined
 	return path.slice(index + 1)
 }
+
+export function getBrowserTimezone() {
+	const error = new Error(
+		"`getBrowserTimezone` must be called in the browser."
+	)
+	if (!isBrowser()) throw error
+	return Intl.DateTimeFormat().resolvedOptions().timeZone
+}
+
+export function isBrowser() {
+	let isBrowser = false
+	try {
+		isBrowser = !!window
+	} catch (err) {
+		isBrowser = false
+	}
+	return isBrowser
+}
