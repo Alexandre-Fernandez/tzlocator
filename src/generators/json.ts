@@ -1,3 +1,4 @@
+import { writeFileSync } from "fs"
 import countryTimezones from "../static/base/timezone-country-code.json"
 import countries from "../static/base/countries.json"
 import currencies from "../static/base/currencies.json"
@@ -7,7 +8,6 @@ import {
 	assertIsTimezoneCountryCodeArray,
 } from "../functions/assertions"
 import type { Timezones } from "../types/output"
-import { writeFileSync } from "fs"
 import paths from "../paths"
 
 assertIsTimezoneCountryCodeArray(countryTimezones)
@@ -15,6 +15,9 @@ assertIsCountryDataArray(countries)
 assertIsCurrencyDataArray(currencies)
 
 const timezoneData = {} as Timezones
+
+/* eslint-disable no-console */
+/* eslint-disable no-restricted-syntax */
 for (const countryTimezone of countryTimezones) {
 	const country = countries.find(
 		c => c.countryCode === countryTimezone.countryCode

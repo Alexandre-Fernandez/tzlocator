@@ -6,14 +6,6 @@ export function getExtension(path: string) {
 	return path.slice(index + 1)
 }
 
-export function getBrowserTimezone() {
-	const error = new Error(
-		"`getBrowserTimezone` must be called in the browser."
-	)
-	if (!isBrowser()) throw error
-	return Intl.DateTimeFormat().resolvedOptions().timeZone as Timezone
-}
-
 export function isBrowser() {
 	let isBrowser = false
 	try {
@@ -22,4 +14,12 @@ export function isBrowser() {
 		isBrowser = false
 	}
 	return isBrowser
+}
+
+export function getBrowserTimezone() {
+	const error = new Error(
+		"`getBrowserTimezone` must be called in the browser."
+	)
+	if (!isBrowser()) throw error
+	return Intl.DateTimeFormat().resolvedOptions().timeZone as Timezone
 }
