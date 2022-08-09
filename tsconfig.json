@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "es2016",
+		"module": "commonjs",
+		"outDir": "./dist",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"useDefineForClassFields": true,
+		"lib": ["ESNext", "DOM"],
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": true,
+		"importsNotUsedAsValues": "error",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"declaration": true
+	},
+	"include": ["src/index.ts"]
+}

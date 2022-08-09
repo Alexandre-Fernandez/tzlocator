@@ -1,0 +1,39 @@
+{
+	"name": "tzlocator",
+	"version": "1.0.0",
+	"description": "Lightweight privacy respecting geolocalisation with no dependencies.",
+	"author": "alexandre-fernandez",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tzlocator/tzlocator"
+	},
+	"keywords": [
+		"tz",
+		"locator",
+		"timezone",
+		"geolocation",
+		"geo",
+		"location",
+		"country",
+		"currency",
+		"position"
+	],
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist"
+	],
+	"scripts": {
+		"clean": "rimraf dist",
+		"generate-types": "tsc src/generators/types.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/generators/types.js",
+		"generate-json": "tsc src/generators/json.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/generators/json.js",
+		"build": "npm run generate-types && npm run generate-json && npm run clean && tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"@types/node": "^18.6.4",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.7.4"
+	}
+}
