@@ -18,8 +18,10 @@ class Tzlocator {
 	 * constructor), if a fallback was not given or does not exist, it will return
 	 * undefined.
 	 */
-	get(timezone: LiteralUnion<Timezone>): TimezoneData | undefined {
-		return this.timezonesMap[timezone as Timezone] || this.fallback
+	get(timezone: LiteralUnion<Timezone>) {
+		return (this.timezonesMap[timezone as Timezone] || this.fallback) as
+			| TimezoneData
+			| undefined
 	}
 
 	/**
