@@ -5,7 +5,7 @@ const root = resolve(__dirname, "../")
 const paths = Object.freeze({
 	output: {
 		types: `${root}/src/types/input/index.ts`,
-		json: `${root}/src/static/geotimezone.json`,
+		json: `${root}/src/static/tzlocator.json`,
 	},
 })
 

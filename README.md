@@ -16,26 +16,26 @@
 
 ```ts
 // npm
-npm install geotimezone
+npm install tzlocator
 // yarn
-yarn add geotimezone
+yarn add tzlocator
 // pnpm
-pnpm add geotimezone
+pnpm add tzlocator
 ```
 
 ## Usage
 
--   Star the [github repo](https://github.com/geotimezone/geotimezone) 😎
+-   Star the [github repo](https://github.com/tzlocator/tzlocator) 😎
 
 ### Browser
 
 #### Single page application
 
 ```ts
-import { geotimezone } from "geotimezone"
+import { tzlocator } from "tzlocator"
 // returns the browser's timezone, e.g. "Europe/London"
 const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-const timezoneData = geotimezone.get(timezone)
+const timezoneData = tzlocator.get(timezone)
 ```
 
 #### Server side rendering
@@ -49,17 +49,17 @@ document.cookie = `timezone=${timezone};`
 ### Server
 
 ```ts
-import { geotimezone } from "geotimezone"
+import { tzlocator } from "tzlocator"
 // assuming you sent the browser's timezone in the cookie header
 function getTimezoneData(request: Request) {
 	const cookies = getRequestCookies(request)
-	return geotimezone.get(cookies.timezone)
+	return tzlocator.get(cookies.timezone)
 }
 ```
 
 ## Contributing
 
-1.  Dynamically import `geotimezone.json` and make its instanciation (currently `geotimezone`) a function.
+1.  Dynamically import `tzlocator.json` and make its instanciation (currently `tzlocator`) a function.
 2.  Create a `getBrowserTimezone` utility function to replace `Intl.DateTimeFormat().resolvedOptions().timeZone`.
 
 ## Thanks

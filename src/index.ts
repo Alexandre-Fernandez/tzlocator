@@ -1,5 +1,5 @@
 import Tzlocator from "./classes/Tzlocator"
-import geotimezoneJson from "./static/geotimezone.json"
+import tzlocatorJson from "./static/tzlocator.json"
 export type {
 	Timezones,
 	TimezoneData,
@@ -8,4 +8,4 @@ export type {
 	Currency,
 } from "./types/output"
 
-export const geotimezone = new Tzlocator(geotimezoneJson as any)
+export const tzlocator = new Tzlocator(tzlocatorJson as any)
