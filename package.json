@@ -1,6 +1,10 @@
 {
 	"name": "tzlocator",
+<<<<<<< HEAD
 	"version": "1.1.5",
+=======
+	"version": "1.2.0",
+>>>>>>> 149e12404b0d2470433992878442ba3e29e0059e
 	"description": "Lightweight privacy respecting geolocation library with no dependencies.",
 	"author": "alexandre-fernandez",
 	"license": "MIT",

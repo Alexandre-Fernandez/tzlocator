@@ -2,10 +2,10 @@ import type { Timezones, Timezone, TimezoneData } from "../types/output"
 import type { LiteralUnion } from "../types/utilities"
 
 class Tzlocator {
-	private fallback: TimezoneData | undefined
+	private fallbackTimezoneData: TimezoneData | undefined
 
 	constructor(private timezonesMap: Timezones, fallback?: Timezone) {
-		if (fallback) this.fallback = this.get(fallback)
+		if (fallback) this.fallbackTimezoneData = this.get(fallback)
 	}
 
 	has(timezone: LiteralUnion<Timezone>) {
@@ -18,10 +18,10 @@ class Tzlocator {
 	 * constructor), if a fallback was not given or does not exist, it will return
 	 * undefined.
 	 */
-	get(timezone: LiteralUnion<Timezone>) {
-		return (this.timezonesMap[timezone as Timezone] || this.fallback) as
-			| TimezoneData
-			| undefined
+	get(timezone: LiteralUnion<Timezone>): TimezoneData | undefined {
+		return (
+			this.timezonesMap[timezone as Timezone] || this.fallbackTimezoneData
+		)
 	}
 
 	/**
@@ -37,8 +37,20 @@ class Tzlocator {
 		}, {} as Partial<Timezones>)
 	}
 
+	fallback() {
+		return this.fallbackTimezoneData
+	}
+
 	timezones() {
 		return Object.keys(this.timezonesMap) as Timezone[]
+	}
+
+	currencies() {
+		return Object.values(this.timezonesMap).map(t => t.currency)
+	}
+
+	countries() {
+		return Object.values(this.timezonesMap).map(t => t.country)
 	}
 
 	toJSON() {
