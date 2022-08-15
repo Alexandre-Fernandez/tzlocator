@@ -2,6 +2,7 @@ import timezones from "../../json/timezones.json"
 import Locator from "./Locator"
 import type { CountryCode, Timezone } from "../types/base"
 import type { LiteralUnion } from "../types/utilities"
+import type Language from "./Language"
 
 type LocatorFilterPredicate = (locator: Locator) => boolean
 
@@ -49,7 +50,17 @@ class Tzlocator {
 
 	currencies() {}
 
-	languages() {}
+	languages() {
+		this.locators().reduce((prev, locator) => {
+			const languages = locator.getLanguages()
+			if (languages.length > 0) {
+				locator.getLanguages().forEach(language => {
+					if (!prev.includes(language)) prev.push(language)
+				})
+			}
+			return prev
+		}, [] as Language[])
+	}
 
 	locators() {
 		return Object.keys(timezones).reduce((prev, timezone) => {
