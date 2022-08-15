@@ -2,9 +2,9 @@ import countries from "../../json/countries.json"
 import currencies from "../../json/currencies.json"
 import languages from "../../json/languages.json"
 import timezones from "../../json/timezones.json"
+import paths from "../paths"
 import { generateUnionTypesFile } from "../functions/file/generation"
 import { getArrayItemProperties } from "../functions/parsing"
-import paths from "../paths"
 
 const countryEntries = Object.entries(countries)
 const {
@@ -72,5 +72,5 @@ generateUnionTypesFile(paths.output.types, [
 	{ name: "LanguageName", values: languageNames },
 	{ name: "LanguageNativeName", values: languageNativeNames },
 	{ name: "LanguageScript", values: languageScripts },
-	{ name: "Timezones", values: tzs },
+	{ name: "Timezone", values: tzs },
 ])

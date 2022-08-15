@@ -2109,7 +2109,8 @@
 		"measurement": "metric",
 		"name": "United States Minor Outlying Islands",
 		"prefix": "+1",
-		"continent": "Oceania"
+		"continent": "Oceania",
+		"native": "United States Minor Outlying Islands"
 	},
 	"US": {
 		"currency": "USD",

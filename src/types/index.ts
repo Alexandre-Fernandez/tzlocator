@@ -1,20 +1,40 @@
-/*
-export type Timezones = {
-	[key in Timezone]: {
-		country: {
-			code: CountryCode
-			name: CountryName
-			continent: CountryContinent
-		}
-		currency: {
-			code: CurrencyCode
-			symbol: string
-			name: CurrencyName
-		}
-	}
+import type {
+	CountryCode,
+	CountryContinent,
+	CountryLocale,
+	CountryMeasurement,
+	CountryName,
+	CountryNativeName,
+	CountryPhonePrefix,
+	CurrencyCode,
+	CurrencyName,
+	CurrencySymbol,
+	LanguageCode,
+	LanguageName,
+	LanguageNativeName,
+	LanguageScript,
+} from "./base"
+
+export interface CurrencyProperties {
+	code: CurrencyCode
+	symbol: CurrencySymbol
+	name: CurrencyName
 }
-export type TimezoneData = Timezones[Timezone]
-export type { Timezone } from "../input"
-export type Country = TimezoneData["country"]
-export type Currency = TimezoneData["currency"]
-*/
+
+export interface LanguageProperties {
+	code: LanguageCode
+	name: LanguageName
+	native: LanguageNativeName
+	scripts: LanguageScript[]
+}
+
+export interface LocatorProperties {
+	code: CountryCode
+	name: CountryName
+	prefix: CountryPhonePrefix
+	continent: CountryContinent
+	native: CountryNativeName
+	measurement: CountryMeasurement
+	currency: CurrencyProperties
+	locales: CountryLocale[]
+}
