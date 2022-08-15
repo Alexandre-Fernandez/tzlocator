@@ -1,5 +1,4 @@
 import countries from "../../json/countries.json"
-import type { LocatorProperties } from "../types"
 import type {
 	CountryCode,
 	CountryContinent,
@@ -14,6 +13,16 @@ import type {
 import Currency from "./Currency"
 import Language from "./Language"
 
+export interface LocatorProperties {
+	code: CountryCode
+	name: CountryName
+	prefix: CountryPhonePrefix
+	continent: CountryContinent
+	native: CountryNativeName
+	measurement: CountryMeasurement
+	currency: Currency
+	locales: CountryLocale[]
+}
 class Locator implements LocatorProperties {
 	code: CountryCode
 	name: CountryName

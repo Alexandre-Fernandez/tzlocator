@@ -1,20 +1,21 @@
 import timezones from "../../json/timezones.json"
-import type { CountryCode, Timezone } from "../types/base"
 import Locator from "./Locator"
+import type { CountryCode, Timezone } from "../types/base"
+import type { LiteralUnion } from "../types/utilities"
 
-type LocatorPredicate = (locator: Locator) => boolean
+type LocatorFilterPredicate = (locator: Locator) => boolean
 
 type TzlocatorConfig = Partial<{
 	fallback: Timezone
-	include: LocatorPredicate[]
-	exclude: LocatorPredicate[]
+	include: LocatorFilterPredicate[]
+	exclude: LocatorFilterPredicate[]
 }>
 
 class Tzlocator {
 	private fallback: Readonly<Locator> | undefined
-	private includers = [] as Readonly<LocatorPredicate[]>
-	private excluders = [] as Readonly<LocatorPredicate[]>
-	private validLocators = {} as Record<CountryCode, true>
+	private includers = [] as Readonly<LocatorFilterPredicate[]>
+	private excluders = [] as Readonly<LocatorFilterPredicate[]>
+	private validLocatorsCache = {} as Record<CountryCode, true>
 
 	constructor(config?: TzlocatorConfig) {
 		if (!config) return
@@ -23,7 +24,7 @@ class Tzlocator {
 		this.fallback = config.fallback ? this.get(config.fallback) : undefined
 	}
 
-	get(timezone: string) {
+	get(timezone: LiteralUnion<Timezone>) {
 		if (!this.has(timezone)) {
 			if (this.fallback) return this.fallback
 			throw new Error(`${timezone} is not a valid timezone.`)
@@ -35,17 +36,18 @@ class Tzlocator {
 		else return undefined
 	}
 
-	has(timezone: string): timezone is Timezone {
+	has(timezone: LiteralUnion<Timezone>): timezone is Timezone {
 		if (timezones[timezone as Timezone]) return true
 		return false
 	}
 
-	private isValid(locator: Locator) {
-		if (this.validLocators[locator.code]) return true
+	private isValid(locator: Locator, useCache = true) {
+		if (this.validLocatorsCache[locator.code]) return true
 		if (this.isIncluded(locator) && !this.isExcluded(locator)) {
-			this.validLocators[locator.code] = true
+			if (useCache) this.validLocatorsCache[locator.code] = true
 			return true
-		} else return false
+		}
+		return false
 	}
 
 	private isIncluded(locator: Locator) {

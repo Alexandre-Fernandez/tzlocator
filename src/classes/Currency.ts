@@ -1,7 +1,11 @@
 import currencies from "../../json/currencies.json"
-import type { CurrencyProperties } from "../types"
 import type { CurrencyCode, CurrencyName, CurrencySymbol } from "../types/base"
 
+export interface CurrencyProperties {
+	code: CurrencyCode
+	symbol: CurrencySymbol
+	name: CurrencyName
+}
 class Currency implements CurrencyProperties {
 	code: CurrencyCode
 	symbol: CurrencySymbol

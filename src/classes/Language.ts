@@ -1,5 +1,4 @@
 import languages from "../../json/languages.json"
-import type { LanguageProperties } from "../types"
 import type {
 	LanguageCode,
 	LanguageName,
@@ -7,6 +6,12 @@ import type {
 	LanguageScript,
 } from "../types/base"
 
+export interface LanguageProperties {
+	code: LanguageCode
+	name: LanguageName
+	native: LanguageNativeName
+	scripts: LanguageScript[]
+}
 class Language implements LanguageProperties {
 	code: LanguageCode
 	name: LanguageName
