@@ -1,28 +1,76 @@
-import countryTimezones from "../static/base/timezone-country-code.json"
-import countries from "../static/base/countries.json"
-import currencies from "../static/base/currencies.json"
-import { getArrayItemProperties } from "../functions/parsing"
+import countries from "../../json/countries.json"
+import currencies from "../../json/currencies.json"
+import languages from "../../json/languages.json"
+import timezones from "../../json/timezones.json"
 import { generateUnionTypesFile } from "../functions/file/generation"
+import { getArrayItemProperties } from "../functions/parsing"
 import paths from "../paths"
 
-const { CountryCode, Timezone } = getArrayItemProperties(countryTimezones, [
-	{ saveAs: "CountryCode", fn: o => o.countryCode },
-	{ saveAs: "Timezone", fn: o => o.timezone },
+const countryEntries = Object.entries(countries)
+const {
+	countryCodes,
+	countryMeasurements,
+	countryNames,
+	countryPrefixes,
+	countryContinents,
+	countryNativeNames,
+} = getArrayItemProperties(countryEntries, [
+	{ saveAs: "countryCodes", fn: ([code]) => code },
+	{
+		saveAs: "countryMeasurements",
+		fn: ([_, country]) => country.measurement,
+	},
+	{ saveAs: "countryNames", fn: ([_, country]) => country.name },
+	{ saveAs: "countryPrefixes", fn: ([_, country]) => country.prefix },
+	{
+		saveAs: "countryContinents",
+		fn: ([_, country]) => country.continent,
+	},
+	{ saveAs: "countryNativeNames", fn: ([_, country]) => country.native },
 ])
-const { CountryName, CountryContinent } = getArrayItemProperties(countries, [
-	{ saveAs: "CountryName", fn: o => o.countryName },
-	{ saveAs: "CountryContinent", fn: o => o.continentName },
-])
-const { CurrencyCode, CurrencyName } = getArrayItemProperties(currencies, [
-	{ saveAs: "CurrencyCode", fn: o => o.currencyCode },
-	{ saveAs: "CurrencyName", fn: o => o.currencyName },
+const countryLocales = countryEntries.reduce((prev, [_, country]) => {
+	return [...prev, ...country.locales]
+}, [] as string[])
+
+const { currencyCodes, currencySymbols, currencyNames } =
+	getArrayItemProperties(Object.entries(currencies), [
+		{ saveAs: "currencyCodes", fn: ([code]) => code },
+		{ saveAs: "currencySymbols", fn: ([_, currency]) => currency.symbol },
+		{ saveAs: "currencyNames", fn: ([_, currency]) => currency.name },
+	])
+
+const languageEntries = Object.entries(languages)
+const { languageCodes, languageNames, languageNativeNames } =
+	getArrayItemProperties(languageEntries, [
+		{ saveAs: "languageCodes", fn: ([code]) => code },
+		{ saveAs: "languageNames", fn: ([_, language]) => language.name },
+		{
+			saveAs: "languageNativeNames",
+			fn: ([_, language]) => language.native,
+		},
+	])
+const languageScripts = languageEntries.reduce((prev, [_, language]) => {
+	return [...prev, ...language.scripts]
+}, [] as string[])
+
+const { tzs } = getArrayItemProperties(Object.entries(timezones), [
+	{ saveAs: "tzs", fn: ([timezone]) => timezone },
 ])
 
 generateUnionTypesFile(paths.output.types, [
-	{ name: "CountryCode", values: CountryCode },
-	{ name: "Timezone", values: Timezone },
-	{ name: "CountryName", values: CountryName },
-	{ name: "CountryContinent", values: CountryContinent },
-	{ name: "CurrencyCode", values: CurrencyCode },
-	{ name: "CurrencyName", values: CurrencyName },
+	{ name: "CountryCode", values: countryCodes },
+	{ name: "CountryMeasurement", values: countryMeasurements },
+	{ name: "CountryName", values: countryNames },
+	{ name: "CountryPhonePrefix", values: countryPrefixes },
+	{ name: "CountryContinent", values: countryContinents },
+	{ name: "CountryNativeName", values: countryNativeNames },
+	{ name: "CountryLocale", values: countryLocales },
+	{ name: "CurrencyCode", values: currencyCodes },
+	{ name: "CurrencySymbol", values: currencySymbols },
+	{ name: "CurrencyName", values: currencyNames },
+	{ name: "LanguageCode", values: languageCodes },
+	{ name: "LanguageName", values: languageNames },
+	{ name: "LanguageNativeName", values: languageNativeNames },
+	{ name: "LanguageScript", values: languageScripts },
+	{ name: "Timezones", values: tzs },
 ])

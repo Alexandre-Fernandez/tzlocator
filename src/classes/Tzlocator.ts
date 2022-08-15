@@ -1,6 +1,16 @@
 import type { Timezones, Timezone, TimezoneData } from "../types/output"
 import type { LiteralUnion } from "../types/utilities"
 
+type Predicate = () => true
+
+type TzlocatorConfig = Partial<{
+	include: Predicate[]
+	exclude: Predicate[]
+	fallback: ""
+}>
+
+class TzlocatorNew {}
+
 class Tzlocator {
 	private fallbackTimezoneData: TimezoneData | undefined
 
