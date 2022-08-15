@@ -24,15 +24,15 @@ class Tzlocator {
 		this.fallback = config.fallback ? this.get(config.fallback) : undefined
 	}
 
-	get(timezone: LiteralUnion<Timezone>) {
+	get(timezone: LiteralUnion<Timezone>, useFallback = true) {
 		if (!this.has(timezone)) {
-			if (this.fallback) return this.fallback
+			if (useFallback && this.fallback) return this.fallback
 			throw new Error(`${timezone} is not a valid timezone.`)
 		}
 
 		const locator = new Locator(timezones[timezone] as CountryCode)
 		if (this.isValid(locator)) return locator
-		else if (this.fallback) return this.fallback
+		else if (useFallback && this.fallback) return this.fallback
 		else return undefined
 	}
 
