@@ -14,10 +14,11 @@ export function isBrowser() {
 	return isBrowser
 }
 
-// export function getBrowserTimezone() {
-// 	const error = new Error(
-// 		"`getBrowserTimezone` must be called in the browser."
-// 	)
-// 	if (!isBrowser()) throw error
-// 	return Intl.DateTimeFormat().resolvedOptions().timeZone as Timezone
-// }
+export function getBrowserTimezone() {
+	if (!isBrowser()) {
+		throw new Error(
+			"`getBrowserTimezone` must exclusively be called in the browser."
+		)
+	}
+	return Intl.DateTimeFormat().resolvedOptions().timeZone
+}

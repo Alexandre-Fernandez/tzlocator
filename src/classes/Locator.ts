@@ -10,31 +10,40 @@ import type {
 	CurrencyCode,
 	LanguageCode,
 } from "../types/base"
+import type { LiteralUnion } from "../types/utilities"
 import Currency from "./Currency"
 import Language from "./Language"
 
-export interface LocatorProperties {
+class Locator {
 	code: CountryCode
+
 	name: CountryName
+
 	prefix: CountryPhonePrefix
+
 	continent: CountryContinent
+
 	native: CountryNativeName
+
 	measurement: CountryMeasurement
+
 	currency: Currency
-	locales: CountryLocale[]
-}
-class Locator implements LocatorProperties {
-	code: CountryCode
-	name: CountryName
-	prefix: CountryPhonePrefix
-	continent: CountryContinent
-	native: CountryNativeName
-	measurement: CountryMeasurement
-	currency: Currency
+
 	locales: CountryLocale[]
 
-	constructor(countryCode: CountryCode) {
-		if (!countries[countryCode]) {
+	/**
+	 * Returns a boolean indicating if the `countryCode` has an assigned
+	 * Locator.
+	 */
+	static exists(
+		countryCode: LiteralUnion<CountryCode>
+	): countryCode is CountryCode {
+		if (countries[countryCode as CountryCode]) return true
+		return false
+	}
+
+	constructor(countryCode: LiteralUnion<CountryCode>) {
+		if (!Locator.exists(countryCode)) {
 			throw new Error(`${countryCode} is not a valid country.`)
 		}
 		this.code = countryCode
@@ -60,18 +69,5 @@ class Locator implements LocatorProperties {
 		}, [] as Language[])
 	}
 }
-
-/*
-export interface LocatorProperties {
-	code: CountryCode
-	name: CountryName
-	prefix: CountryPhonePrefix
-	continent: CountryContinent
-	native: CountryNativeName
-	measurement: CountryMeasurement
-	currency: Currency
-	locales: CountryLocale[]
-}
-*/
 
 export default Locator

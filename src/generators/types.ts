@@ -3,8 +3,10 @@ import currencies from "../../json/currencies.json"
 import languages from "../../json/languages.json"
 import timezones from "../../json/timezones.json"
 import paths from "../paths"
-import { generateUnionTypesFile } from "../functions/file/generation"
-import { getArrayItemProperties } from "../functions/parsing"
+import {
+	getArrayItemStringProperties,
+	generateUnionTypesFile,
+} from "../functions/generation"
 
 const countryEntries = Object.entries(countries)
 const {
@@ -14,7 +16,7 @@ const {
 	countryPrefixes,
 	countryContinents,
 	countryNativeNames,
-} = getArrayItemProperties(countryEntries, [
+} = getArrayItemStringProperties(countryEntries, [
 	{ saveAs: "countryCodes", fn: ([code]) => code },
 	{
 		saveAs: "countryMeasurements",
@@ -28,12 +30,13 @@ const {
 	},
 	{ saveAs: "countryNativeNames", fn: ([_, country]) => country.native },
 ])
-const countryLocales = countryEntries.reduce((prev, [_, country]) => {
-	return [...prev, ...country.locales]
-}, [] as string[])
+const countryLocales = countryEntries.reduce(
+	(prev, [_, country]) => [...prev, ...country.locales],
+	[] as string[]
+)
 
 const { currencyCodes, currencySymbols, currencyNames } =
-	getArrayItemProperties(Object.entries(currencies), [
+	getArrayItemStringProperties(Object.entries(currencies), [
 		{ saveAs: "currencyCodes", fn: ([code]) => code },
 		{ saveAs: "currencySymbols", fn: ([_, currency]) => currency.symbol },
 		{ saveAs: "currencyNames", fn: ([_, currency]) => currency.name },
@@ -41,7 +44,7 @@ const { currencyCodes, currencySymbols, currencyNames } =
 
 const languageEntries = Object.entries(languages)
 const { languageCodes, languageNames, languageNativeNames } =
-	getArrayItemProperties(languageEntries, [
+	getArrayItemStringProperties(languageEntries, [
 		{ saveAs: "languageCodes", fn: ([code]) => code },
 		{ saveAs: "languageNames", fn: ([_, language]) => language.name },
 		{
@@ -49,11 +52,12 @@ const { languageCodes, languageNames, languageNativeNames } =
 			fn: ([_, language]) => language.native,
 		},
 	])
-const languageScripts = languageEntries.reduce((prev, [_, language]) => {
-	return [...prev, ...language.scripts]
-}, [] as string[])
+const languageScripts = languageEntries.reduce(
+	(prev, [_, language]) => [...prev, ...language.scripts],
+	[] as string[]
+)
 
-const { tzs } = getArrayItemProperties(Object.entries(timezones), [
+const { tzs } = getArrayItemStringProperties(Object.entries(timezones), [
 	{ saveAs: "tzs", fn: ([timezone]) => timezone },
 ])
 

@@ -5,21 +5,30 @@ import type {
 	LanguageNativeName,
 	LanguageScript,
 } from "../types/base"
+import type { LiteralUnion } from "../types/utilities"
 
-export interface LanguageProperties {
+class Language {
 	code: LanguageCode
+
 	name: LanguageName
+
 	native: LanguageNativeName
-	scripts: LanguageScript[]
-}
-class Language implements LanguageProperties {
-	code: LanguageCode
-	name: LanguageName
-	native: LanguageNativeName
+
 	scripts: LanguageScript[]
 
-	constructor(languageCode: LanguageCode) {
-		if (!languages[languageCode]) {
+	/**
+	 * Returns a boolean indicating if the `languageCode` has an assigned
+	 * Language.
+	 */
+	static exists(
+		languageCode: LiteralUnion<LanguageCode>
+	): languageCode is LanguageCode {
+		if (languages[languageCode as LanguageCode]) return true
+		return false
+	}
+
+	constructor(languageCode: LiteralUnion<LanguageCode>) {
+		if (!Language.exists(languageCode)) {
 			throw new Error(`${languageCode} is not a valid language.`)
 		}
 		this.code = languageCode

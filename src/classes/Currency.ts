@@ -1,18 +1,27 @@
 import currencies from "../../json/currencies.json"
 import type { CurrencyCode, CurrencyName, CurrencySymbol } from "../types/base"
+import type { LiteralUnion } from "../types/utilities"
 
-export interface CurrencyProperties {
+class Currency {
 	code: CurrencyCode
+
 	symbol: CurrencySymbol
-	name: CurrencyName
-}
-class Currency implements CurrencyProperties {
-	code: CurrencyCode
-	symbol: CurrencySymbol
+
 	name: CurrencyName
 
-	constructor(currencyCode: CurrencyCode) {
-		if (!currencies[currencyCode]) {
+	/**
+	 * Returns a boolean indicating if the `currencyCode` has an assigned
+	 * Currency.
+	 */
+	static exists(
+		currencyCode: LiteralUnion<CurrencyCode>
+	): currencyCode is CurrencyCode {
+		if (currencies[currencyCode as CurrencyCode]) return true
+		return false
+	}
+
+	constructor(currencyCode: LiteralUnion<CurrencyCode>) {
+		if (!Currency.exists(currencyCode)) {
 			throw new Error(`${currencyCode} is not a valid currency.`)
 		}
 		this.code = currencyCode

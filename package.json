@@ -28,8 +28,7 @@
 		"lint": "eslint --ignore-path .eslintignore .",
 		"clean": "rimraf dist",
 		"generate-types": "tsc src/generators/types.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/src/generators/types.js",
-		"generate-json": "tsc src/generators/json.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/generators/json.js",
-		"build": "npm run lint && npm run generate-types && npm run generate-json && npm run clean && tsc",
+		"build": "npm run lint && npm run generate-types && npm run clean && tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"devDependencies": {
