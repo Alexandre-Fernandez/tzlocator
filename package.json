@@ -1,10 +1,6 @@
 {
 	"name": "tzlocator",
-<<<<<<< HEAD
-	"version": "1.1.5",
-=======
-	"version": "1.2.0",
->>>>>>> 149e12404b0d2470433992878442ba3e29e0059e
+	"version": "2.0.0",
 	"description": "Lightweight privacy respecting geolocation library with no dependencies.",
 	"author": "alexandre-fernandez",
 	"license": "MIT",
@@ -23,17 +19,16 @@
 		"currency",
 		"position"
 	],
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/src/index.js",
+	"types": "dist/src/index.d.ts",
 	"files": [
 		"/dist"
 	],
 	"scripts": {
 		"lint": "eslint --ignore-path .eslintignore .",
 		"clean": "rimraf dist",
-		"generate-types": "tsc src/generators/types.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/generators/types.js",
-		"generate-json": "tsc src/generators/json.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/generators/json.js",
-		"build": "npm run lint && npm run generate-types && npm run generate-json && npm run clean && tsc",
+		"generate-types": "tsc src/generators/types.ts --outDir dist --resolveJsonModule --esModuleInterop && node dist/src/generators/types.js",
+		"build": "npm run lint && npm run generate-types && npm run clean && tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"devDependencies": {

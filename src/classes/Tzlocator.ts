@@ -1,60 +1,139 @@
-import type { Timezones, Timezone, TimezoneData } from "../types/output"
+import timezones from "../../json/timezones.json"
+import Locator from "./Locator"
+import type { CountryCode, Timezone } from "../types/base"
 import type { LiteralUnion } from "../types/utilities"
+import type Language from "./Language"
+import type Currency from "./Currency"
+
+type LocatorFilterPredicate = (locator: Locator) => boolean
+
+type TzlocatorConfig = Partial<{
+	fallback: Timezone
+	include: LocatorFilterPredicate[]
+	exclude: LocatorFilterPredicate[]
+}>
 
 class Tzlocator {
-	private fallbackTimezoneData: TimezoneData | undefined
+	private fallback: Readonly<Locator> | undefined
 
-	constructor(private timezonesMap: Timezones, fallback?: Timezone) {
-		if (fallback) this.fallbackTimezoneData = this.get(fallback)
+	private includers = [] as Readonly<LocatorFilterPredicate[]>
+
+	private excluders = [] as Readonly<LocatorFilterPredicate[]>
+
+	private validLocatorsCache = {} as Record<CountryCode, true>
+
+	/**
+	 * Returns a boolean indicating if the `timezone` has an assigned
+	 * CountryCode.
+	 */
+	static exists(timezone: LiteralUnion<Timezone>): timezone is Timezone {
+		if (timezones[timezone as Timezone]) return true
+		return false
 	}
 
+	constructor(config?: TzlocatorConfig) {
+		if (!config) return
+		if (config.include) this.includers = config.include
+		if (config.exclude) this.excluders = config.exclude
+		this.fallback = this._getUnvalidated(config.fallback)
+	}
+
+	/**
+	 * Returns the Locator corresponding to the `timezone`.
+	 * If `useFallback` is true and the `timezone` cannot be found in the
+	 * included Locator pool it will return the set config fallback.
+	 * Else if there's no set fallback or if `useFallback` is false it will
+	 * return undefined.
+	 */
+	get(timezone: LiteralUnion<Timezone>, useFallback = true) {
+		if (!Tzlocator.exists(timezone)) {
+			if (useFallback && this.fallback) return this.fallback
+			throw new Error(`${timezone} is not a valid timezone.`)
+		}
+
+		const locator = new Locator(timezones[timezone] as CountryCode)
+		if (this._isValid(locator)) return locator
+		if (useFallback && this.fallback) return this.fallback
+		return undefined
+	}
+
+	/**
+	 * Returns a boolean indicating if the `timezone` has a valid assigned
+	 * Locator.
+	 */
 	has(timezone: LiteralUnion<Timezone>) {
-		return !!this.timezonesMap[timezone as Timezone]
+		if (this.get(timezone, false)) return true
+		return false
 	}
 
 	/**
-	 * Returns the corresponding TimezoneData for the given Timezone, if the the
-	 * timezone does not exist it will return the fallback (set in the class
-	 * constructor), if a fallback was not given or does not exist, it will return
-	 * undefined.
+	 * Returns an array of all the valid timezones for the current instance.
 	 */
-	get(timezone: LiteralUnion<Timezone>): TimezoneData | undefined {
-		return (
-			this.timezonesMap[timezone as Timezone] || this.fallbackTimezoneData
-		)
-	}
-
-	/**
-	 * `predicate` will be called one for every available timezone, if it returns
-	 * `false` it will be filtered out, else it will be added to an object using
-	 * its `timezone` as a key.
-	 */
-	filter(predicate: (data: TimezoneData, timezone: Timezone) => boolean) {
-		return Object.entries(this.timezonesMap).reduce((prev, entry) => {
-			const [timezone, data] = entry as [Timezone, TimezoneData]
-			if (predicate(data, timezone)) prev[timezone] = data
-			return prev
-		}, {} as Partial<Timezones>)
-	}
-
-	fallback() {
-		return this.fallbackTimezoneData
-	}
-
 	timezones() {
-		return Object.keys(this.timezonesMap) as Timezone[]
+		return Object.keys(timezones).filter(timezone =>
+			this.get(timezone, false)
+		) as Timezone[]
 	}
 
+	/**
+	 * Returns an array of all the valid currencies for the current instance.
+	 */
 	currencies() {
-		return Object.values(this.timezonesMap).map(t => t.currency)
+		return this.locators().reduce((prev, locator) => {
+			if (!prev.find(cur => cur.code === locator.currency.code)) {
+				prev.push(locator.currency)
+			}
+			return prev
+		}, [] as Currency[])
 	}
 
-	countries() {
-		return Object.values(this.timezonesMap).map(t => t.country)
+	/**
+	 * Returns an array of all the valid languages for the current instance.
+	 */
+	languages() {
+		return this.locators().reduce((prev, locator) => {
+			const languages = locator.getLanguages()
+			if (languages.length > 0) {
+				locator.getLanguages().forEach(language => {
+					if (!prev.includes(language)) prev.push(language)
+				})
+			}
+			return prev
+		}, [] as Language[])
 	}
 
-	toJSON() {
-		return JSON.stringify(this.timezonesMap)
+	/**
+	 * Returns an array of all the valid locators for the current instance.
+	 */
+	locators() {
+		return Object.keys(timezones).reduce((prev, timezone) => {
+			const locator = this.get(timezone, false)
+			if (locator) prev.push(locator)
+			return prev
+		}, [] as Locator[])
+	}
+
+	private _getUnvalidated(timezone?: LiteralUnion<Timezone>) {
+		if (!timezone) return undefined
+		if (!Tzlocator.exists(timezone)) return undefined
+		return new Locator(timezones[timezone] as CountryCode)
+	}
+
+	private _isValid(locator: Locator, useCache = true) {
+		if (this.validLocatorsCache[locator.code]) return true
+		if (this._isIncluded(locator) && !this._isExcluded(locator)) {
+			if (useCache) this.validLocatorsCache[locator.code] = true
+			return true
+		}
+		return false
+	}
+
+	private _isIncluded(locator: Locator) {
+		return this.includers.every(includer => includer(locator))
+	}
+
+	private _isExcluded(locator: Locator) {
+		return this.excluders.some(excluder => excluder(locator))
 	}
 }
 

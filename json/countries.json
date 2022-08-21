@@ -1,0 +1,2322 @@
+{
+	"AD": {
+		"currency": "EUR",
+		"locales": ["ca-AD"],
+		"measurement": "metric",
+		"name": "Andorra",
+		"prefix": "+376",
+		"continent": "Europe",
+		"native": "Andorra"
+	},
+	"AE": {
+		"currency": "AED",
+		"locales": ["ar-AE"],
+		"measurement": "metric",
+		"name": "United Arab Emirates",
+		"prefix": "+971",
+		"continent": "Asia",
+		"native": "الإمارات العربيّة المتّحدة"
+	},
+	"AF": {
+		"currency": "AFN",
+		"locales": ["fa-AF", "ps-AF", "uz-Arab-AF"],
+		"measurement": "metric",
+		"name": "Afghanistan",
+		"prefix": "+93",
+		"continent": "Asia",
+		"native": "Afghanestan"
+	},
+	"AG": {
+		"currency": "XCD",
+		"locales": ["en-AG"],
+		"measurement": "metric",
+		"name": "Antigua and Barbuda",
+		"prefix": "+1268",
+		"continent": "North America",
+		"native": "Antigua and Barbuda"
+	},
+	"AI": {
+		"currency": "XCD",
+		"locales": ["en-AI"],
+		"measurement": "metric",
+		"name": "Anguilla",
+		"prefix": "+1 264",
+		"continent": "North America",
+		"native": "Anguilla"
+	},
+	"AL": {
+		"currency": "ALL",
+		"locales": ["sq-AL"],
+		"measurement": "metric",
+		"name": "Albania",
+		"prefix": "+355",
+		"continent": "Europe",
+		"native": "Shqipëria"
+	},
+	"AM": {
+		"currency": "AMD",
+		"locales": ["hy-AM"],
+		"measurement": "metric",
+		"name": "Armenia",
+		"prefix": "+374",
+		"continent": "Asia",
+		"native": "Հայաստան"
+	},
+	"AO": {
+		"currency": "AOA",
+		"locales": ["ln-AO", "pt-AO"],
+		"measurement": "metric",
+		"name": "Angola",
+		"prefix": "+244",
+		"continent": "Africa",
+		"native": "Angola"
+	},
+	"AR": {
+		"currency": "ARS",
+		"locales": ["es-AR"],
+		"measurement": "metric",
+		"name": "Argentina",
+		"prefix": "+54",
+		"continent": "South America",
+		"native": "Argentina"
+	},
+	"AS": {
+		"currency": "USD",
+		"locales": ["en-AS"],
+		"measurement": "metric",
+		"name": "American Samoa",
+		"prefix": "+1 684",
+		"continent": "Oceania",
+		"native": "American Samoa"
+	},
+	"AT": {
+		"currency": "EUR",
+		"locales": ["de-AT", "en-AT"],
+		"measurement": "metric",
+		"name": "Austria",
+		"prefix": "+43",
+		"continent": "Europe",
+		"native": "Österreich"
+	},
+	"AU": {
+		"currency": "AUD",
+		"locales": ["en-AU"],
+		"measurement": "metric",
+		"name": "Australia",
+		"prefix": "+61",
+		"continent": "Oceania",
+		"native": "Australia"
+	},
+	"AW": {
+		"currency": "AWG",
+		"locales": ["nl-AW"],
+		"measurement": "metric",
+		"name": "Aruba",
+		"prefix": "+297",
+		"continent": "North America",
+		"native": "Aruba"
+	},
+	"AX": {
+		"currency": "EUR",
+		"locales": ["sv-AX"],
+		"measurement": "metric",
+		"name": "Åland",
+		"prefix": "+358 18",
+		"continent": "Europe",
+		"native": "Åland"
+	},
+	"AZ": {
+		"currency": "AZN",
+		"locales": ["az-Cyrl-AZ", "az-Latn-AZ"],
+		"measurement": "metric",
+		"name": "Azerbaijan",
+		"prefix": "+994",
+		"continent": "Asia",
+		"native": "Azərbaycan"
+	},
+	"BA": {
+		"currency": "BAM",
+		"locales": [
+			"bs-Cyrl-BA",
+			"bs-Latn-BA",
+			"hr-BA",
+			"sr-Cyrl-BA",
+			"sr-Latn-BA"
+		],
+		"measurement": "metric",
+		"name": "Bosnia and Herzegovina",
+		"prefix": "+387",
+		"continent": "Europe",
+		"native": "Bosna i Hercegovina"
+	},
+	"BB": {
+		"currency": "BBD",
+		"locales": ["en-BB"],
+		"measurement": "metric",
+		"name": "Barbados",
+		"prefix": "+1 246",
+		"continent": "North America",
+		"native": "Barbados"
+	},
+	"BD": {
+		"currency": "BDT",
+		"locales": ["bn-BD", "ccp-BD"],
+		"measurement": "metric",
+		"name": "Bangladesh",
+		"prefix": "+880",
+		"continent": "Asia",
+		"native": "বাংলাদেশ"
+	},
+	"BE": {
+		"currency": "EUR",
+		"locales": ["de-BE", "en-BE", "fr-BE", "nl-BE"],
+		"measurement": "metric",
+		"name": "Belgium",
+		"prefix": "+32",
+		"continent": "Europe",
+		"native": "Belgique"
+	},
+	"BF": {
+		"currency": "XOF",
+		"locales": ["fr-BF"],
+		"measurement": "metric",
+		"name": "Burkina Faso",
+		"prefix": "+226",
+		"continent": "Africa",
+		"native": "Burkina Faso"
+	},
+	"BG": {
+		"currency": "BGN",
+		"locales": ["bg-BG"],
+		"measurement": "metric",
+		"name": "Bulgaria",
+		"prefix": "+359",
+		"continent": "Europe",
+		"native": "България"
+	},
+	"BH": {
+		"currency": "BHD",
+		"locales": ["ar-BH"],
+		"measurement": "metric",
+		"name": "Bahrain",
+		"prefix": "+973",
+		"continent": "Asia",
+		"native": "البحرين"
+	},
+	"BI": {
+		"currency": "BIF",
+		"locales": ["en-BI", "fr-BI", "rn-BI"],
+		"measurement": "metric",
+		"name": "Burundi",
+		"prefix": "+257",
+		"continent": "Africa",
+		"native": "Burundi"
+	},
+	"BJ": {
+		"currency": "XOF",
+		"locales": ["fr-BJ", "yo-BJ"],
+		"measurement": "metric",
+		"name": "Benin",
+		"prefix": "+229",
+		"continent": "Africa",
+		"native": "Bénin"
+	},
+	"BL": {
+		"currency": "EUR",
+		"locales": ["fr-BL"],
+		"measurement": "metric",
+		"name": "Saint Barthélemy",
+		"prefix": "+590",
+		"continent": "North America",
+		"native": "Saint-Barthélemy"
+	},
+	"BM": {
+		"currency": "BMD",
+		"locales": ["en-BM"],
+		"measurement": "metric",
+		"name": "Bermuda",
+		"prefix": "+1 441",
+		"continent": "North America",
+		"native": "Bermuda"
+	},
+	"BN": {
+		"currency": "BND",
+		"locales": ["ms-BN"],
+		"measurement": "metric",
+		"name": "Brunei",
+		"prefix": "+673",
+		"continent": "Asia",
+		"native": "Brunei"
+	},
+	"BO": {
+		"currency": "BOB",
+		"locales": ["es-BO", "qu-BO"],
+		"measurement": "metric",
+		"name": "Bolivia",
+		"prefix": "+591",
+		"continent": "South America",
+		"native": "Bolivia"
+	},
+	"BQ": {
+		"currency": "USD",
+		"locales": ["nl-BQ"],
+		"measurement": "metric",
+		"name": "Bonaire",
+		"prefix": "+599 7",
+		"continent": "North America",
+		"native": "Bonaire"
+	},
+	"BR": {
+		"currency": "BRL",
+		"locales": ["es-BR", "pt-BR"],
+		"measurement": "metric",
+		"name": "Brazil",
+		"prefix": "+55",
+		"continent": "South America",
+		"native": "Brasil"
+	},
+	"BS": {
+		"currency": "BSD",
+		"locales": ["en-BS"],
+		"measurement": "metric",
+		"name": "Bahamas",
+		"prefix": "+1 242",
+		"continent": "North America",
+		"native": "Bahamas"
+	},
+	"BT": {
+		"currency": "BTN",
+		"locales": ["dz-BT"],
+		"measurement": "metric",
+		"name": "Bhutan",
+		"prefix": "+975",
+		"continent": "Asia",
+		"native": "འབྲུག་ཡུལ"
+	},
+	"BW": {
+		"currency": "BWP",
+		"locales": ["en-BW"],
+		"measurement": "metric",
+		"name": "Botswana",
+		"prefix": "+267",
+		"continent": "Africa",
+		"native": "Botswana"
+	},
+	"BY": {
+		"currency": "BYN",
+		"locales": ["be-BY", "ru-BY"],
+		"measurement": "metric",
+		"name": "Belarus",
+		"prefix": "+375",
+		"continent": "Europe",
+		"native": "Беларусь"
+	},
+	"BZ": {
+		"currency": "BZD",
+		"locales": ["en-BZ", "es-BZ"],
+		"measurement": "metric",
+		"name": "Belize",
+		"prefix": "+501",
+		"continent": "North America",
+		"native": "Belize"
+	},
+	"CA": {
+		"currency": "CAD",
+		"locales": ["en-CA", "fr-CA"],
+		"measurement": "metric",
+		"name": "Canada",
+		"prefix": "+1",
+		"continent": "North America",
+		"native": "Canada"
+	},
+	"CC": {
+		"currency": "AUD",
+		"locales": ["en-CC"],
+		"measurement": "metric",
+		"name": "Cocos (Keeling) Islands",
+		"prefix": "+61",
+		"continent": "Asia",
+		"native": "Cocos Islands"
+	},
+	"CD": {
+		"currency": "CDF",
+		"locales": ["fr-CD", "ln-CD", "lu-CD", "sw-CD"],
+		"measurement": "metric",
+		"name": "Democratic Republic of the Congo",
+		"prefix": "+243",
+		"continent": "Africa",
+		"native": "République démocratique du Congo"
+	},
+	"CF": {
+		"currency": "XAF",
+		"locales": ["fr-CF", "ln-CF", "sg-CF"],
+		"measurement": "metric",
+		"name": "Central African Republic",
+		"prefix": "+236",
+		"continent": "Africa",
+		"native": "Centrafrique"
+	},
+	"CG": {
+		"currency": "XAF",
+		"locales": ["fr-CG", "ln-CG"],
+		"measurement": "metric",
+		"name": "Republic of the Congo",
+		"prefix": "+242",
+		"continent": "Africa",
+		"native": "République du Congo"
+	},
+	"CH": {
+		"currency": "CHF",
+		"locales": [
+			"de-CH",
+			"en-CH",
+			"fr-CH",
+			"gsw-CH",
+			"it-CH",
+			"pt-CH",
+			"rm-CH",
+			"wae-CH"
+		],
+		"measurement": "metric",
+		"name": "Switzerland",
+		"prefix": "+41",
+		"continent": "Europe",
+		"native": "Schweiz"
+	},
+	"CI": {
+		"currency": "XOF",
+		"locales": ["fr-CI"],
+		"measurement": "metric",
+		"name": "Cote d'Ivoire",
+		"prefix": "+225",
+		"continent": "Africa",
+		"native": "Côte d'Ivoire"
+	},
+	"CK": {
+		"currency": "NZD",
+		"locales": ["en-CK"],
+		"measurement": "metric",
+		"name": "Cook Islands",
+		"prefix": "+682",
+		"continent": "Oceania",
+		"native": "Cook Islands"
+	},
+	"CL": {
+		"currency": "CLP",
+		"locales": ["es-CL"],
+		"measurement": "metric",
+		"name": "Chile",
+		"prefix": "+56",
+		"continent": "South America",
+		"native": "Chile"
+	},
+	"CM": {
+		"currency": "XAF",
+		"locales": [
+			"agq-CM",
+			"bas-CM",
+			"dua-CM",
+			"en-CM",
+			"ewo-CM",
+			"ff-CM",
+			"fr-CM",
+			"jgo-CM",
+			"kkj-CM",
+			"ksf-CM",
+			"mgo-CM",
+			"mua-CM",
+			"nmg-CM",
+			"nnh-CM",
+			"yav-CM"
+		],
+		"measurement": "metric",
+		"name": "Cameroon",
+		"prefix": "+237",
+		"continent": "Africa",
+		"native": "Cameroun"
+	},
+	"CN": {
+		"currency": "CNY",
+		"locales": ["bo-CN", "ii-CN", "ug-CN", "yue-Hans-CN", "zh-Hans-CN"],
+		"measurement": "metric",
+		"name": "China",
+		"prefix": "+86",
+		"continent": "Asia",
+		"native": "中国"
+	},
+	"CO": {
+		"currency": "COP",
+		"locales": ["es-CO"],
+		"measurement": "metric",
+		"name": "Colombia",
+		"prefix": "+57",
+		"continent": "South America",
+		"native": "Colombia"
+	},
+	"CR": {
+		"currency": "CRC",
+		"locales": ["es-CR"],
+		"measurement": "metric",
+		"name": "Costa Rica",
+		"prefix": "+506",
+		"continent": "North America",
+		"native": "Costa Rica"
+	},
+	"CU": {
+		"currency": "CUP",
+		"locales": ["es-CU"],
+		"measurement": "metric",
+		"name": "Cuba",
+		"prefix": "+53",
+		"continent": "North America",
+		"native": "Cuba"
+	},
+	"CV": {
+		"currency": "CVE",
+		"locales": ["kea-CV", "pt-CV"],
+		"measurement": "metric",
+		"name": "Cape Verde",
+		"prefix": "+238",
+		"continent": "Africa",
+		"native": "Cabo Verde"
+	},
+	"CW": {
+		"currency": "ANG",
+		"locales": ["nl-CW"],
+		"measurement": "metric",
+		"name": "Curaçao",
+		"prefix": "+5999",
+		"continent": "North America",
+		"native": "Curaçao"
+	},
+	"CX": {
+		"currency": "AUD",
+		"locales": ["en-CX"],
+		"measurement": "metric",
+		"name": "Christmas Island",
+		"prefix": "+61",
+		"continent": "Asia",
+		"native": "Christmas Island"
+	},
+	"CY": {
+		"currency": "EUR",
+		"locales": ["el-CY", "en-CY", "tr-CY"],
+		"measurement": "metric",
+		"name": "Cyprus",
+		"prefix": "+537",
+		"continent": "Europe",
+		"native": "Κύπρος"
+	},
+	"CZ": {
+		"currency": "CZK",
+		"locales": ["cs-CZ"],
+		"measurement": "metric",
+		"name": "Czech Republic",
+		"prefix": "+420",
+		"continent": "Europe",
+		"native": "Česká republika"
+	},
+	"DE": {
+		"currency": "EUR",
+		"locales": ["de-DE", "dsb-DE", "en-DE", "hsb-DE", "ksh-DE", "nds-DE"],
+		"measurement": "metric",
+		"name": "Germany",
+		"prefix": "+49",
+		"continent": "Europe",
+		"native": "Deutschland"
+	},
+	"DJ": {
+		"currency": "DJF",
+		"locales": ["ar-DJ", "fr-DJ", "so-DJ"],
+		"measurement": "metric",
+		"name": "Djibouti",
+		"prefix": "+253",
+		"continent": "Africa",
+		"native": "جيبوتي"
+	},
+	"DK": {
+		"currency": "DKK",
+		"locales": ["da-DK", "en-DK", "fo-DK"],
+		"measurement": "metric",
+		"name": "Denmark",
+		"prefix": "+45",
+		"continent": "Europe",
+		"native": "Danmark"
+	},
+	"DM": {
+		"currency": "XCD",
+		"locales": ["en-DM"],
+		"measurement": "metric",
+		"name": "Dominica",
+		"prefix": "+1 767",
+		"continent": "North America",
+		"native": "Dominica"
+	},
+	"DO": {
+		"currency": "DOP",
+		"locales": ["es-DO"],
+		"measurement": "metric",
+		"name": "Dominican Republic",
+		"prefix": "+1 849",
+		"continent": "North America",
+		"native": "República Dominicana"
+	},
+	"DZ": {
+		"currency": "DZD",
+		"locales": ["ar-DZ", "fr-DZ", "kab-DZ"],
+		"measurement": "metric",
+		"name": "Algeria",
+		"prefix": "+213",
+		"continent": "Africa",
+		"native": "Al-Jazā'ir"
+	},
+	"EC": {
+		"currency": "USD",
+		"locales": ["es-EC", "qu-EC"],
+		"measurement": "metric",
+		"name": "Ecuador",
+		"prefix": "+593",
+		"continent": "South America",
+		"native": "Ecuador"
+	},
+	"EE": {
+		"currency": "EUR",
+		"locales": ["et-EE"],
+		"measurement": "metric",
+		"name": "Estonia",
+		"prefix": "+372",
+		"continent": "Europe",
+		"native": "Eesti"
+	},
+	"EG": {
+		"currency": "EGP",
+		"locales": ["ar-EG"],
+		"measurement": "metric",
+		"name": "Egypt",
+		"prefix": "+20",
+		"continent": "Africa",
+		"native": "مصر"
+	},
+	"EH": {
+		"currency": "MAD",
+		"locales": ["ar-EH"],
+		"measurement": "metric",
+		"name": "Sahrawi Arab Democratic Republic",
+		"prefix": "+212",
+		"continent": "Africa",
+		"native": "الجمهورية العربية الصحراوية الديمقراطية"
+	},
+	"ER": {
+		"currency": "ERN",
+		"locales": ["ar-ER", "en-ER", "ti-ER"],
+		"measurement": "metric",
+		"name": "Eritrea",
+		"prefix": "+291",
+		"continent": "Africa",
+		"native": "إرتريا"
+	},
+	"ES": {
+		"currency": "EUR",
+		"locales": ["es-ES", "ast-ES", "ca-ES", "eu-ES", "gl-ES"],
+		"measurement": "metric",
+		"name": "Spain",
+		"prefix": "+34",
+		"continent": "Europe",
+		"native": "España"
+	},
+	"ET": {
+		"currency": "ETB",
+		"locales": ["am-ET", "om-ET", "so-ET", "ti-ET"],
+		"measurement": "metric",
+		"name": "Ethiopia",
+		"prefix": "+251",
+		"continent": "Africa",
+		"native": "ኢትዮጵያ"
+	},
+	"FI": {
+		"currency": "EUR",
+		"locales": ["fi-FI", "en-FI", "se-FI", "smn-FI", "sv-FI"],
+		"measurement": "metric",
+		"name": "Finland",
+		"prefix": "+358",
+		"continent": "Europe",
+		"native": "Suomi"
+	},
+	"FJ": {
+		"currency": "FJD",
+		"locales": ["en-FJ"],
+		"measurement": "metric",
+		"name": "Fiji",
+		"prefix": "+679",
+		"continent": "Oceania",
+		"native": "Fiji"
+	},
+	"FK": {
+		"currency": "FKP",
+		"locales": ["en-FK"],
+		"measurement": "metric",
+		"name": "Falkland Islands",
+		"prefix": "+500",
+		"continent": "South America",
+		"native": "Falkland Islands"
+	},
+	"FM": {
+		"currency": "USD",
+		"locales": ["en-FM"],
+		"measurement": "metric",
+		"name": "Micronesia",
+		"prefix": "+691",
+		"continent": "Oceania",
+		"native": "Micronesia"
+	},
+	"FO": {
+		"currency": "DKK",
+		"locales": ["fo-FO"],
+		"measurement": "metric",
+		"name": "Faroe Islands",
+		"prefix": "+298",
+		"continent": "Europe",
+		"native": "Føroyar"
+	},
+	"FR": {
+		"currency": "EUR",
+		"locales": ["fr-FR", "br-FR", "ca-FR", "gsw-FR"],
+		"measurement": "metric",
+		"name": "France",
+		"prefix": "+33",
+		"continent": "Europe",
+		"native": "France"
+	},
+	"GA": {
+		"currency": "XAF",
+		"locales": ["fr-GA"],
+		"measurement": "metric",
+		"name": "Gabon",
+		"prefix": "+241",
+		"continent": "Africa",
+		"native": "République gabonaise"
+	},
+	"GB": {
+		"currency": "GBP",
+		"locales": ["cy-GB", "en-GB", "gd-GB", "kw-GB"],
+		"measurement": "metric",
+		"name": "United Kingdom",
+		"prefix": "+44",
+		"continent": "Europe",
+		"native": "United Kingdom"
+	},
+	"GD": {
+		"currency": "XCD",
+		"locales": ["en-GD"],
+		"measurement": "metric",
+		"name": "Grenada",
+		"prefix": "+1 473",
+		"continent": "North America",
+		"native": "Grenada"
+	},
+	"GE": {
+		"currency": "GEL",
+		"locales": ["ka-GE", "os-GE"],
+		"measurement": "metric",
+		"name": "Georgia",
+		"prefix": "+995",
+		"continent": "Asia",
+		"native": "საქართველო"
+	},
+	"GF": {
+		"currency": "EUR",
+		"locales": ["fr-GF"],
+		"measurement": "metric",
+		"name": "French Guiana",
+		"prefix": "+594",
+		"continent": "South America",
+		"native": "Guyane"
+	},
+	"GG": {
+		"currency": "GBP",
+		"locales": ["en-GG"],
+		"measurement": "metric",
+		"name": "Guernsey",
+		"prefix": "+44",
+		"continent": "Europe",
+		"native": "Guernsey"
+	},
+	"GH": {
+		"currency": "GHS",
+		"locales": ["ak-GH", "ee-GH", "en-GH", "ha-GH"],
+		"measurement": "metric",
+		"name": "Ghana",
+		"prefix": "+233",
+		"continent": "Africa",
+		"native": "Gaana"
+	},
+	"GI": {
+		"currency": "GIP",
+		"locales": ["en-GI"],
+		"measurement": "metric",
+		"name": "Gibraltar",
+		"prefix": "+350",
+		"continent": "Europe",
+		"native": "Gibraltar"
+	},
+	"GL": {
+		"currency": "DKK",
+		"locales": ["da-GL", "kl-GL"],
+		"measurement": "metric",
+		"name": "Greenland",
+		"prefix": "+299",
+		"continent": "North America",
+		"native": "Grønland"
+	},
+	"GM": {
+		"currency": "GMD",
+		"locales": ["en-GM"],
+		"measurement": "metric",
+		"name": "Gambia",
+		"prefix": "+220",
+		"continent": "Africa",
+		"native": "Gambia"
+	},
+	"GN": {
+		"currency": "GNF",
+		"locales": ["ff-GN", "fr-GN"],
+		"measurement": "metric",
+		"name": "Guinea",
+		"prefix": "+224",
+		"continent": "Africa",
+		"native": "Guinée"
+	},
+	"GP": {
+		"currency": "EUR",
+		"locales": ["fr-GP"],
+		"measurement": "metric",
+		"name": "Guadeloupe",
+		"prefix": "+590",
+		"continent": "North America",
+		"native": "Guadeloupe"
+	},
+	"GQ": {
+		"currency": "XAF",
+		"locales": ["es-GQ", "fr-GQ", "pt-GQ"],
+		"measurement": "metric",
+		"name": "Equatorial Guinea",
+		"prefix": "+240",
+		"continent": "Africa",
+		"native": "Guinée équatoriale"
+	},
+	"GR": {
+		"currency": "EUR",
+		"locales": ["el-GR"],
+		"measurement": "metric",
+		"name": "Greece",
+		"prefix": "+30",
+		"continent": "Europe",
+		"native": "Ελλάδα"
+	},
+	"GT": {
+		"currency": "GTQ",
+		"locales": ["es-GT"],
+		"measurement": "metric",
+		"name": "Guatemala",
+		"prefix": "+502",
+		"continent": "North America",
+		"native": "Guatemala"
+	},
+	"GU": {
+		"currency": "USD",
+		"locales": ["en-GU"],
+		"measurement": "metric",
+		"name": "Guam",
+		"prefix": "+1 671",
+		"continent": "Oceania",
+		"native": "Guam"
+	},
+	"GW": {
+		"currency": "XOF",
+		"locales": ["pt-GW"],
+		"measurement": "metric",
+		"name": "Guinea-Bissau",
+		"prefix": "+245",
+		"continent": "Africa",
+		"native": "Guiné-Bissau"
+	},
+	"GY": {
+		"currency": "GYD",
+		"locales": ["en-GY"],
+		"measurement": "metric",
+		"name": "Guyana",
+		"prefix": "+595",
+		"continent": "South America",
+		"native": "Guyana"
+	},
+	"HK": {
+		"currency": "HKD",
+		"locales": ["en-HK", "yue-Hant-HK", "zh-Hans-HK", "zh-Hant-HK"],
+		"measurement": "metric",
+		"name": "Hong Kong",
+		"prefix": "+852",
+		"continent": "Asia",
+		"native": "Hong Kong"
+	},
+	"HN": {
+		"currency": "HNL",
+		"locales": ["es-HN"],
+		"measurement": "metric",
+		"name": "Honduras",
+		"prefix": "+504",
+		"continent": "North America",
+		"native": "Honduras"
+	},
+	"HR": {
+		"currency": "HRK",
+		"locales": ["hr-HR"],
+		"measurement": "metric",
+		"name": "Croatia",
+		"prefix": "+385",
+		"continent": "Europe",
+		"native": "Hrvatska"
+	},
+	"HT": {
+		"currency": "HTG",
+		"locales": ["fr-HT"],
+		"measurement": "metric",
+		"name": "Haiti",
+		"prefix": "+509",
+		"continent": "North America",
+		"native": "Haïti"
+	},
+	"HU": {
+		"currency": "HUF",
+		"locales": ["hu-HU"],
+		"measurement": "metric",
+		"name": "Hungary",
+		"prefix": "+36",
+		"continent": "Europe",
+		"native": "Magyarország"
+	},
+	"ID": {
+		"currency": "IDR",
+		"locales": ["id-ID"],
+		"measurement": "metric",
+		"name": "Indonesia",
+		"prefix": "+62",
+		"continent": "Asia",
+		"native": "Indonesia"
+	},
+	"IE": {
+		"currency": "EUR",
+		"locales": ["en-IE", "ga-IE"],
+		"measurement": "metric",
+		"name": "Ireland",
+		"prefix": "+353",
+		"continent": "Europe",
+		"native": "Ireland"
+	},
+	"IL": {
+		"currency": "ILS",
+		"locales": ["ar-IL", "en-IL", "he-IL"],
+		"measurement": "metric",
+		"name": "Israel",
+		"prefix": "+972",
+		"continent": "Asia",
+		"native": "ישראל"
+	},
+	"IM": {
+		"currency": "GBP",
+		"locales": ["en-IM", "gv-IM"],
+		"measurement": "metric",
+		"name": "Isle of Man",
+		"prefix": "+44",
+		"continent": "Europe",
+		"native": "Isle of Man"
+	},
+	"IN": {
+		"currency": "INR",
+		"locales": [
+			"as-IN",
+			"bn-IN",
+			"bo-IN",
+			"brx-IN",
+			"ccp-IN",
+			"en-IN",
+			"gu-IN",
+			"hi-IN",
+			"kn-IN",
+			"kok-IN",
+			"ks-IN",
+			"ml-IN",
+			"mr-IN",
+			"ne-IN",
+			"or-IN",
+			"pa-Guru-IN",
+			"ta-IN",
+			"te-IN",
+			"ur-IN"
+		],
+		"measurement": "metric",
+		"name": "India",
+		"prefix": "+91",
+		"continent": "Asia",
+		"native": "ভারত"
+	},
+	"IO": {
+		"currency": "USD",
+		"locales": ["en-IO"],
+		"measurement": "metric",
+		"name": "British Indian Ocean Territory",
+		"prefix": "+246",
+		"continent": "Asia",
+		"native": "British Indian Ocean Territory"
+	},
+	"IQ": {
+		"currency": "IQD",
+		"locales": ["ar-IQ", "ckb-IQ", "lrc-IQ"],
+		"measurement": "metric",
+		"name": "Iraq",
+		"prefix": "+964",
+		"continent": "Asia",
+		"native": "العراق"
+	},
+	"IR": {
+		"currency": "IRR",
+		"locales": ["ckb-IR", "fa-IR", "lrc-IR", "mzn-IR"],
+		"measurement": "metric",
+		"name": "Iran",
+		"prefix": "+98",
+		"continent": "Asia",
+		"native": "ایران"
+	},
+	"IS": {
+		"currency": "ISK",
+		"locales": ["is-IS"],
+		"measurement": "metric",
+		"name": "Iceland",
+		"prefix": "+354",
+		"continent": "Europe",
+		"native": "Ísland"
+	},
+	"IT": {
+		"currency": "EUR",
+		"locales": ["it-IT", "ca-IT", "de-IT", "fur-IT"],
+		"measurement": "metric",
+		"name": "Italy",
+		"prefix": "+39",
+		"continent": "Europe",
+		"native": "Italia"
+	},
+	"JE": {
+		"currency": "GBP",
+		"locales": ["en-JE"],
+		"measurement": "metric",
+		"name": "Jersey",
+		"prefix": "+44",
+		"continent": "Europe",
+		"native": "Jersey"
+	},
+	"JM": {
+		"currency": "JMD",
+		"locales": ["en-JM"],
+		"measurement": "metric",
+		"name": "Jamaica",
+		"prefix": "+1 876",
+		"continent": "North America",
+		"native": "Jamaica"
+	},
+	"JO": {
+		"currency": "JOD",
+		"locales": ["ar-JO"],
+		"measurement": "metric",
+		"name": "Jordan",
+		"prefix": "+962",
+		"continent": "Asia",
+		"native": "الأردن"
+	},
+	"JP": {
+		"currency": "JPY",
+		"locales": ["ja-JP"],
+		"measurement": "metric",
+		"name": "Japan",
+		"prefix": "+81",
+		"continent": "Asia",
+		"native": "日本"
+	},
+	"KE": {
+		"currency": "KES",
+		"locales": [
+			"dav-KE",
+			"ebu-KE",
+			"en-KE",
+			"guz-KE",
+			"kam-KE",
+			"ki-KE",
+			"kln-KE",
+			"luo-KE",
+			"luy-KE",
+			"mas-KE",
+			"mer-KE",
+			"om-KE",
+			"saq-KE",
+			"so-KE",
+			"sw-KE",
+			"teo-KE"
+		],
+		"measurement": "metric",
+		"name": "Kenya",
+		"prefix": "+254",
+		"continent": "Africa",
+		"native": "Kenya"
+	},
+	"KG": {
+		"currency": "KGS",
+		"locales": ["ky-KG", "ru-KG"],
+		"measurement": "metric",
+		"name": "Kyrgyzstan",
+		"prefix": "+996",
+		"continent": "Asia",
+		"native": "Кыргызстан"
+	},
+	"KH": {
+		"currency": "KHR",
+		"locales": ["km-KH"],
+		"measurement": "metric",
+		"name": "Cambodia",
+		"prefix": "+855",
+		"continent": "Asia",
+		"native": "កម្ពុជា"
+	},
+	"KI": {
+		"currency": "AUD",
+		"locales": ["en-KI"],
+		"measurement": "metric",
+		"name": "Kiribati",
+		"prefix": "+686",
+		"continent": "Oceania",
+		"native": "Kiribati"
+	},
+	"KM": {
+		"currency": "KMF",
+		"locales": ["ar-KM", "fr-KM"],
+		"measurement": "metric",
+		"name": "Comoros",
+		"prefix": "+269",
+		"continent": "Africa",
+		"native": "جزر القمر"
+	},
+	"KN": {
+		"currency": "XCD",
+		"locales": ["en-KN"],
+		"measurement": "metric",
+		"name": "Saint Kitts and Nevis",
+		"prefix": "+1 869",
+		"continent": "North America",
+		"native": "Saint Kitts and Nevis"
+	},
+	"KP": {
+		"currency": "KPW",
+		"locales": ["ko-KP"],
+		"measurement": "metric",
+		"name": "North Korea",
+		"prefix": "+850",
+		"continent": "Asia",
+		"native": "북조선"
+	},
+	"KR": {
+		"currency": "KRW",
+		"locales": ["ko-KR"],
+		"measurement": "metric",
+		"name": "South Korea",
+		"prefix": "+82",
+		"continent": "Asia",
+		"native": "남한"
+	},
+	"KW": {
+		"currency": "KWD",
+		"locales": ["ar-KW"],
+		"measurement": "metric",
+		"name": "Kuwait",
+		"prefix": "+965",
+		"continent": "Asia",
+		"native": "دولة الكويت"
+	},
+	"KY": {
+		"currency": "KYD",
+		"locales": ["en-KY"],
+		"measurement": "metric",
+		"name": "Cayman Islands",
+		"prefix": "+ 345",
+		"continent": "North America",
+		"native": "Cayman Islands"
+	},
+	"KZ": {
+		"currency": "KZT",
+		"locales": ["kk-KZ", "ru-KZ"],
+		"measurement": "metric",
+		"name": "Kazakhstan",
+		"prefix": "+7 7",
+		"continent": "Asia",
+		"native": "Қазақстан"
+	},
+	"LA": {
+		"currency": "LAK",
+		"locales": ["lo-LA"],
+		"measurement": "metric",
+		"name": "Laos",
+		"prefix": "+856",
+		"continent": "Asia",
+		"native": "ປະເທດລາວ"
+	},
+	"LB": {
+		"currency": "LBP",
+		"locales": ["ar-LB"],
+		"measurement": "metric",
+		"name": "Lebanon",
+		"prefix": "+961",
+		"continent": "Asia",
+		"native": "لبنان"
+	},
+	"LC": {
+		"currency": "XCD",
+		"locales": ["en-LC"],
+		"measurement": "metric",
+		"name": "Saint Lucia",
+		"prefix": "+1 758",
+		"continent": "North America",
+		"native": "Saint Lucia"
+	},
+	"LI": {
+		"currency": "CHF",
+		"locales": ["de-LI", "gsw-LI"],
+		"measurement": "metric",
+		"name": "Liechtenstein",
+		"prefix": "+423",
+		"continent": "Europe",
+		"native": "Liechtenstein"
+	},
+	"LK": {
+		"currency": "LKR",
+		"locales": ["si-LK", "ta-LK"],
+		"measurement": "metric",
+		"name": "Sri Lanka",
+		"prefix": "+94",
+		"continent": "Asia",
+		"native": "ශ්‍රී ලංකාව"
+	},
+	"LR": {
+		"currency": "LRD",
+		"locales": ["en-LR", "vai-Latn-LR", "vai-Vaii-LR"],
+		"measurement": "imperial",
+		"name": "Liberia",
+		"prefix": "+231",
+		"continent": "Africa",
+		"native": "Liberia"
+	},
+	"LS": {
+		"currency": "ZAR",
+		"locales": ["en-LS"],
+		"measurement": "metric",
+		"name": "Lesotho",
+		"prefix": "+266",
+		"continent": "Africa",
+		"native": "Lesotho"
+	},
+	"LT": {
+		"currency": "EUR",
+		"locales": ["lt-LT"],
+		"measurement": "metric",
+		"name": "Lithuania",
+		"prefix": "+370",
+		"continent": "Europe",
+		"native": "Lietuva"
+	},
+	"LU": {
+		"currency": "EUR",
+		"locales": ["de-LU", "fr-LU", "lb-LU", "pt-LU"],
+		"measurement": "metric",
+		"name": "Luxembourg",
+		"prefix": "+352",
+		"continent": "Europe",
+		"native": "Lëtzebuerg"
+	},
+	"LV": {
+		"currency": "EUR",
+		"locales": ["lv-LV"],
+		"measurement": "metric",
+		"name": "Latvia",
+		"prefix": "+371",
+		"continent": "Europe",
+		"native": "Latvija"
+	},
+	"LY": {
+		"currency": "LYD",
+		"locales": ["ar-LY"],
+		"measurement": "metric",
+		"name": "Libya",
+		"prefix": "+218",
+		"continent": "Africa",
+		"native": "ليبيا"
+	},
+	"MA": {
+		"currency": "MAD",
+		"locales": [
+			"ar-MA",
+			"fr-MA",
+			"shi-Latn-MA",
+			"shi-Tfng-MA",
+			"tzm-MA",
+			"zgh-MA"
+		],
+		"measurement": "metric",
+		"name": "Morocco",
+		"prefix": "+212",
+		"continent": "Africa",
+		"native": "المغرب"
+	},
+	"MC": {
+		"currency": "EUR",
+		"locales": ["fr-MC"],
+		"measurement": "metric",
+		"name": "Monaco",
+		"prefix": "+377",
+		"continent": "Europe",
+		"native": "Monaco"
+	},
+	"MD": {
+		"currency": "MDL",
+		"locales": ["ro-MD", "ru-MD"],
+		"measurement": "metric",
+		"name": "Moldova",
+		"prefix": "+373",
+		"continent": "Europe",
+		"native": "Moldova"
+	},
+	"ME": {
+		"currency": "EUR",
+		"locales": ["sr-Cyrl-ME", "sr-Latn-ME"],
+		"measurement": "metric",
+		"name": "Montenegro",
+		"prefix": "+382",
+		"continent": "Europe",
+		"native": "Crna Gora"
+	},
+	"MF": {
+		"currency": "EUR",
+		"locales": ["fr-MF"],
+		"measurement": "metric",
+		"name": "Saint Martin",
+		"prefix": "+590",
+		"continent": "North America",
+		"native": "Saint-Martin"
+	},
+	"MG": {
+		"currency": "MGA",
+		"locales": ["mg-MG", "en-MG", "fr-MG"],
+		"measurement": "metric",
+		"name": "Madagascar",
+		"prefix": "+261",
+		"continent": "Africa",
+		"native": "Madagasikara"
+	},
+	"MH": {
+		"currency": "USD",
+		"locales": ["en-MH"],
+		"measurement": "metric",
+		"name": "Marshall Islands",
+		"prefix": "+692",
+		"continent": "Oceania",
+		"native": "Marshall Islands"
+	},
+	"MK": {
+		"currency": "MKD",
+		"locales": ["mk-MK", "sq-MK"],
+		"measurement": "metric",
+		"name": "Macedonia",
+		"prefix": "+389",
+		"continent": "Europe",
+		"native": "Severna Makedonija"
+	},
+	"ML": {
+		"currency": "XOF",
+		"locales": ["bm-ML", "fr-ML", "khq-ML", "ses-ML"],
+		"measurement": "metric",
+		"name": "Mali",
+		"prefix": "+223",
+		"continent": "Africa",
+		"native": "Mali"
+	},
+	"MM": {
+		"currency": "MMK",
+		"locales": ["my-MM"],
+		"measurement": "imperial",
+		"name": "Myanmar",
+		"prefix": "+95",
+		"continent": "Asia",
+		"native": "မြန်မာ"
+	},
+	"MN": {
+		"currency": "MNT",
+		"locales": ["mn-MN"],
+		"measurement": "metric",
+		"name": "Mongolia",
+		"prefix": "+976",
+		"continent": "Asia",
+		"native": "Монгол Улс"
+	},
+	"MO": {
+		"currency": "MOP",
+		"locales": ["en-MO", "pt-MO", "zh-Hans-MO", "zh-Hant-MO"],
+		"measurement": "metric",
+		"name": "Macao",
+		"prefix": "+853",
+		"continent": "Asia",
+		"native": "澳門"
+	},
+	"MP": {
+		"currency": "USD",
+		"locales": ["en-MP"],
+		"measurement": "metric",
+		"name": "Northern Mariana Islands",
+		"prefix": "+1 670",
+		"continent": "Oceania",
+		"native": "Northern Mariana Islands"
+	},
+	"MQ": {
+		"currency": "EUR",
+		"locales": ["fr-MQ"],
+		"measurement": "metric",
+		"name": "Martinique",
+		"prefix": "+596",
+		"continent": "North America",
+		"native": "Martinique"
+	},
+	"MR": {
+		"currency": "MRO",
+		"locales": ["ar-MR", "ff-MR", "fr-MR"],
+		"measurement": "metric",
+		"name": "Mauritania",
+		"prefix": "+222",
+		"continent": "Africa",
+		"native": "موريتانيا"
+	},
+	"MS": {
+		"currency": "XCD",
+		"locales": ["en-MS"],
+		"measurement": "metric",
+		"name": "Montserrat",
+		"prefix": "+1664",
+		"continent": "North America",
+		"native": "Montserrat"
+	},
+	"MT": {
+		"currency": "EUR",
+		"locales": ["mt-MT", "en-MT"],
+		"measurement": "metric",
+		"name": "Malta",
+		"prefix": "+356",
+		"continent": "Europe",
+		"native": "Malta"
+	},
+	"MU": {
+		"currency": "MUR",
+		"locales": ["en-MU", "fr-MU", "mfe-MU"],
+		"measurement": "metric",
+		"name": "Mauritius",
+		"prefix": "+230",
+		"continent": "Africa",
+		"native": "Mauritius"
+	},
+	"MW": {
+		"currency": "MWK",
+		"locales": ["en-MW"],
+		"measurement": "metric",
+		"name": "Malawi",
+		"prefix": "+265",
+		"continent": "Africa",
+		"native": "Malawi"
+	},
+	"MX": {
+		"currency": "MXN",
+		"locales": ["es-MX"],
+		"measurement": "metric",
+		"name": "Mexico",
+		"prefix": "+52",
+		"continent": "North America",
+		"native": "México"
+	},
+	"MY": {
+		"currency": "MYR",
+		"locales": ["en-MY", "ms-MY", "ta-MY"],
+		"measurement": "metric",
+		"name": "Malaysia",
+		"prefix": "+60",
+		"continent": "Asia",
+		"native": "Malaysia"
+	},
+	"MZ": {
+		"currency": "MZN",
+		"locales": ["mgh-MZ", "pt-MZ", "seh-MZ"],
+		"measurement": "metric",
+		"name": "Mozambique",
+		"prefix": "+258",
+		"continent": "Africa",
+		"native": "Moçambique"
+	},
+	"NA": {
+		"currency": "NAD",
+		"locales": ["af-NA", "en-NA", "naq-NA"],
+		"measurement": "metric",
+		"name": "Namibia",
+		"prefix": "+264",
+		"continent": "Africa",
+		"native": "Namibië"
+	},
+	"NC": {
+		"currency": "XPF",
+		"locales": ["fr-NC"],
+		"measurement": "metric",
+		"name": "New Caledonia",
+		"prefix": "+687",
+		"continent": "Oceania",
+		"native": "Nouvelle-Calédonie"
+	},
+	"NE": {
+		"currency": "XOF",
+		"locales": ["dje-NE", "fr-NE", "ha-NE", "twq-NE"],
+		"measurement": "metric",
+		"name": "Niger",
+		"prefix": "+227",
+		"continent": "Africa",
+		"native": "Niger"
+	},
+	"NF": {
+		"currency": "AUD",
+		"locales": ["en-NF"],
+		"measurement": "metric",
+		"name": "Norfolk Island",
+		"prefix": "+672",
+		"continent": "Oceania",
+		"native": "Norfolk Island"
+	},
+	"NG": {
+		"currency": "NGN",
+		"locales": ["en-NG", "ha-NG", "ig-NG", "yo-NG"],
+		"measurement": "metric",
+		"name": "Nigeria",
+		"prefix": "+234",
+		"continent": "Africa",
+		"native": "Nigeria"
+	},
+	"NI": {
+		"currency": "NIO",
+		"locales": ["es-NI"],
+		"measurement": "metric",
+		"name": "Nicaragua",
+		"prefix": "+505",
+		"continent": "North America",
+		"native": "Nicaragua"
+	},
+	"NL": {
+		"currency": "EUR",
+		"locales": ["nl-NL", "en-NL", "fy-NL", "nds-NL"],
+		"measurement": "metric",
+		"name": "Netherlands",
+		"prefix": "+31",
+		"continent": "Europe",
+		"native": "Nederland"
+	},
+	"NO": {
+		"currency": "NOK",
+		"locales": ["nb-NO", "nn-NO", "se-NO"],
+		"measurement": "metric",
+		"name": "Norway",
+		"prefix": "+47",
+		"continent": "Europe",
+		"native": "Norge"
+	},
+	"NP": {
+		"currency": "NPR",
+		"locales": ["ne-NP"],
+		"measurement": "metric",
+		"name": "Nepal",
+		"prefix": "+977",
+		"continent": "Asia",
+		"native": "नेपाल"
+	},
+	"NR": {
+		"currency": "AUD",
+		"locales": ["en-NR"],
+		"measurement": "metric",
+		"name": "Nauru",
+		"prefix": "+674",
+		"continent": "Oceania",
+		"native": "Nauru"
+	},
+	"NU": {
+		"currency": "NZD",
+		"locales": ["en-NU"],
+		"measurement": "metric",
+		"name": "Niue",
+		"prefix": "+683",
+		"continent": "Oceania",
+		"native": "Niue"
+	},
+	"NZ": {
+		"currency": "NZD",
+		"locales": ["en-NZ"],
+		"measurement": "metric",
+		"name": "New Zealand",
+		"prefix": "+64",
+		"continent": "Oceania",
+		"native": "New Zealand"
+	},
+	"OM": {
+		"currency": "OMR",
+		"locales": ["ar-OM"],
+		"measurement": "metric",
+		"name": "Oman",
+		"prefix": "+968",
+		"continent": "Asia",
+		"native": "عُمان"
+	},
+	"PA": {
+		"currency": "PAB",
+		"locales": ["es-PA"],
+		"measurement": "metric",
+		"name": "Panama",
+		"prefix": "+507",
+		"continent": "North America",
+		"native": "Panamá"
+	},
+	"PE": {
+		"currency": "PEN",
+		"locales": ["es-PE", "qu-PE"],
+		"measurement": "metric",
+		"name": "Peru",
+		"prefix": "+51",
+		"continent": "South America",
+		"native": "Perú"
+	},
+	"PF": {
+		"currency": "XPF",
+		"locales": ["fr-PF"],
+		"measurement": "metric",
+		"name": "French Polynesia",
+		"prefix": "+689",
+		"continent": "Oceania",
+		"native": "Polynésie française"
+	},
+	"PG": {
+		"currency": "PGK",
+		"locales": ["en-PG"],
+		"measurement": "metric",
+		"name": "Papua New Guinea",
+		"prefix": "+675",
+		"continent": "Oceania",
+		"native": "Papua New Guinea"
+	},
+	"PH": {
+		"currency": "PHP",
+		"locales": ["fil-PH", "en-PH", "es-PH"],
+		"measurement": "metric",
+		"name": "Philippines",
+		"prefix": "+63",
+		"continent": "Asia",
+		"native": "Pilipinas"
+	},
+	"PK": {
+		"currency": "PKR",
+		"locales": ["en-PK", "pa-Arab-PK", "ur-PK"],
+		"measurement": "metric",
+		"name": "Pakistan",
+		"prefix": "+92",
+		"continent": "Asia",
+		"native": "پاکستان"
+	},
+	"PL": {
+		"currency": "PLN",
+		"locales": ["pl-PL"],
+		"measurement": "metric",
+		"name": "Poland",
+		"prefix": "+48",
+		"continent": "Europe",
+		"native": "Polska"
+	},
+	"PM": {
+		"currency": "EUR",
+		"locales": ["fr-PM"],
+		"measurement": "metric",
+		"name": "Saint Pierre and Miquelon",
+		"prefix": "+508",
+		"continent": "North America",
+		"native": "Saint-Pierre et Miquelon"
+	},
+	"PN": {
+		"currency": "NZD",
+		"locales": ["en-PN"],
+		"measurement": "metric",
+		"name": "Pitcairn Islands",
+		"prefix": "+872",
+		"continent": "Oceania",
+		"native": "Pitcairn Islands"
+	},
+	"PR": {
+		"currency": "USD",
+		"locales": ["en-PR", "es-PR"],
+		"measurement": "metric",
+		"name": "Puerto Rico",
+		"prefix": "+1 939",
+		"continent": "North America",
+		"native": "Puerto Rico"
+	},
+	"PS": {
+		"currency": "ILS",
+		"locales": ["ar-PS"],
+		"measurement": "metric",
+		"name": "Palestine",
+		"prefix": "+970",
+		"continent": "Asia",
+		"native": "فلسطين"
+	},
+	"PT": {
+		"currency": "EUR",
+		"locales": ["pt-PT"],
+		"measurement": "metric",
+		"name": "Portugal",
+		"prefix": "+351",
+		"continent": "Europe",
+		"native": "Portugal"
+	},
+	"PW": {
+		"currency": "USD",
+		"locales": ["en-PW"],
+		"measurement": "metric",
+		"name": "Palau",
+		"prefix": "+680",
+		"continent": "Oceania",
+		"native": "Palau"
+	},
+	"PY": {
+		"currency": "PYG",
+		"locales": ["es-PY"],
+		"measurement": "metric",
+		"name": "Paraguay",
+		"prefix": "+595",
+		"continent": "South America",
+		"native": "Paraguay"
+	},
+	"QA": {
+		"currency": "QAR",
+		"locales": ["ar-QA"],
+		"measurement": "metric",
+		"name": "Qatar",
+		"prefix": "+974",
+		"continent": "Asia",
+		"native": "قطر"
+	},
+	"RO": {
+		"currency": "RON",
+		"locales": ["ro-RO"],
+		"measurement": "metric",
+		"name": "Romania",
+		"prefix": "+40",
+		"continent": "Europe",
+		"native": "România"
+	},
+	"RS": {
+		"currency": "RSD",
+		"locales": ["sr-Cyrl-RS", "sr-Latn-RS"],
+		"measurement": "metric",
+		"name": "Serbia",
+		"prefix": "+381",
+		"continent": "Europe",
+		"native": "Србија"
+	},
+	"RU": {
+		"currency": "RUB",
+		"locales": ["ru-RU", "ce-RU", "os-RU", "sah-RU", "tt-RU"],
+		"measurement": "metric",
+		"name": "Russia",
+		"prefix": "+7",
+		"continent": "Europe",
+		"native": "Россия"
+	},
+	"RW": {
+		"currency": "RWF",
+		"locales": ["rw-RW", "en-RW", "fr-RW"],
+		"measurement": "metric",
+		"name": "Rwanda",
+		"prefix": "+250",
+		"continent": "Africa",
+		"native": "Rwanda"
+	},
+	"SA": {
+		"currency": "SAR",
+		"locales": ["ar-SA"],
+		"measurement": "metric",
+		"name": "Saudi Arabia",
+		"prefix": "+966",
+		"continent": "Asia",
+		"native": "المملكة العربية السعودية"
+	},
+	"SB": {
+		"currency": "SBD",
+		"locales": ["en-SB"],
+		"measurement": "metric",
+		"name": "Solomon Islands",
+		"prefix": "+677",
+		"continent": "Oceania",
+		"native": "Solomon Islands"
+	},
+	"SC": {
+		"currency": "SCR",
+		"locales": ["en-SC", "fr-SC"],
+		"measurement": "metric",
+		"name": "Seychelles",
+		"prefix": "+248",
+		"continent": "Africa",
+		"native": "Seychelles"
+	},
+	"SD": {
+		"currency": "SDG",
+		"locales": ["ar-SD", "en-SD"],
+		"measurement": "metric",
+		"name": "Sudan",
+		"prefix": "+249",
+		"continent": "Africa",
+		"native": "السودان"
+	},
+	"SE": {
+		"currency": "SEK",
+		"locales": ["se-SE", "en-SE", "sv-SE"],
+		"measurement": "metric",
+		"name": "Sweden",
+		"prefix": "+46",
+		"continent": "Europe",
+		"native": "Sverige"
+	},
+	"SG": {
+		"currency": "SGD",
+		"locales": ["ms-SG", "en-SG", "ta-SG", "zh-Hans-SG"],
+		"measurement": "metric",
+		"name": "Singapore",
+		"prefix": "+65",
+		"continent": "Asia",
+		"native": "Singapura"
+	},
+	"SH": {
+		"currency": "SHP",
+		"locales": ["en-SH"],
+		"measurement": "metric",
+		"name": "Saint Helena",
+		"prefix": "+290",
+		"continent": "Africa",
+		"native": "Saint Helena"
+	},
+	"SI": {
+		"currency": "EUR",
+		"locales": ["en-SI", "sl-SI"],
+		"measurement": "metric",
+		"name": "Slovenia",
+		"prefix": "+386",
+		"continent": "Europe",
+		"native": "Slovenija"
+	},
+	"SJ": {
+		"currency": "NOK",
+		"locales": ["nb-SJ"],
+		"measurement": "metric",
+		"name": "Svalbard and Jan Mayen",
+		"prefix": "+47",
+		"continent": "Europe",
+		"native": "Svalbard"
+	},
+	"SK": {
+		"currency": "EUR",
+		"locales": ["sk-SK"],
+		"measurement": "metric",
+		"name": "Slovakia",
+		"prefix": "+421",
+		"continent": "Europe",
+		"native": "Slovensko"
+	},
+	"SL": {
+		"currency": "SLL",
+		"locales": ["en-SL"],
+		"measurement": "metric",
+		"name": "Sierra Leone",
+		"prefix": "+232",
+		"continent": "Africa",
+		"native": "Sierra Leone"
+	},
+	"SM": {
+		"currency": "EUR",
+		"locales": ["it-SM"],
+		"measurement": "metric",
+		"name": "San Marino",
+		"prefix": "+378",
+		"continent": "Europe",
+		"native": "San Marino"
+	},
+	"SN": {
+		"currency": "XOF",
+		"locales": ["dyo-SN", "ff-SN", "fr-SN", "wo-SN"],
+		"measurement": "metric",
+		"name": "Senegal",
+		"prefix": "+221",
+		"continent": "Africa",
+		"native": "Sénégal"
+	},
+	"SO": {
+		"currency": "SOS",
+		"locales": ["so-SO", "ar-SO"],
+		"measurement": "metric",
+		"name": "Somalia",
+		"prefix": "+252",
+		"continent": "Africa",
+		"native": "Soomaaliya"
+	},
+	"SR": {
+		"currency": "SRD",
+		"locales": ["nl-SR"],
+		"measurement": "metric",
+		"name": "Suriname",
+		"prefix": "+597",
+		"continent": "South America",
+		"native": "Suriname"
+	},
+	"SS": {
+		"currency": "SSP",
+		"locales": ["ar-SS", "en-SS", "nus-SS"],
+		"measurement": "metric",
+		"name": "South Sudan",
+		"prefix": "+211",
+		"continent": "Africa",
+		"native": "Sudan Kusini"
+	},
+	"ST": {
+		"currency": "STN",
+		"locales": ["pt-ST"],
+		"measurement": "metric",
+		"name": "São Tomé and Príncipe",
+		"prefix": "+239",
+		"continent": "Africa",
+		"native": "São Tomé e Príncipe"
+	},
+	"SV": {
+		"currency": "USD",
+		"locales": ["es-SV"],
+		"measurement": "metric",
+		"name": "El Salvador",
+		"prefix": "+503",
+		"continent": "North America",
+		"native": "El Salvador"
+	},
+	"SX": {
+		"currency": "ANG",
+		"locales": ["nl-SX", "en-SX"],
+		"measurement": "metric",
+		"name": "Sint Maarten",
+		"prefix": "+1 721",
+		"continent": "North America",
+		"native": "Sint Maarten"
+	},
+	"SY": {
+		"currency": "SYP",
+		"locales": ["ar-SY", "fr-SY"],
+		"measurement": "metric",
+		"name": "Syria",
+		"prefix": "+963",
+		"continent": "Asia",
+		"native": "سورية"
+	},
+	"SZ": {
+		"currency": "SZL",
+		"locales": ["en-SZ"],
+		"measurement": "metric",
+		"name": "Eswatini",
+		"prefix": "+268",
+		"continent": "Africa",
+		"native": "eSwatini"
+	},
+	"TC": {
+		"currency": "USD",
+		"locales": ["en-TC"],
+		"measurement": "metric",
+		"name": "Turks and Caicos Islands",
+		"prefix": "+1 649",
+		"continent": "North America",
+		"native": "Turks and Caicos Islands"
+	},
+	"TD": {
+		"currency": "XAF",
+		"locales": ["ar-TD", "fr-TD"],
+		"measurement": "metric",
+		"name": "Chad",
+		"prefix": "+235",
+		"continent": "Africa",
+		"native": "تشاد"
+	},
+	"TG": {
+		"currency": "XOF",
+		"locales": ["ee-TG", "fr-TG"],
+		"measurement": "metric",
+		"name": "Togo",
+		"prefix": "+228",
+		"continent": "Africa",
+		"native": "Togo"
+	},
+	"TH": {
+		"currency": "THB",
+		"locales": ["th-TH"],
+		"measurement": "metric",
+		"name": "Thailand",
+		"prefix": "+66",
+		"continent": "Asia",
+		"native": "ไทย, ประเทศไทย, ราชอาณาจักรไทย"
+	},
+	"TJ": {
+		"currency": "TJS",
+		"locales": ["tg-TJ"],
+		"measurement": "metric",
+		"name": "Tajikistan",
+		"prefix": "+992",
+		"continent": "Asia",
+		"native": "Тоҷикистон"
+	},
+	"TK": {
+		"currency": "NZD",
+		"locales": ["en-TK"],
+		"measurement": "metric",
+		"name": "Tokelau",
+		"prefix": "+690",
+		"continent": "Oceania",
+		"native": "Tokelau"
+	},
+	"TL": {
+		"currency": "USD",
+		"locales": ["pt-TL"],
+		"measurement": "metric",
+		"name": "East Timor",
+		"prefix": "+670",
+		"continent": "Oceania",
+		"native": "Timor-Leste"
+	},
+	"TN": {
+		"currency": "TND",
+		"locales": ["ar-TN", "fr-TN"],
+		"measurement": "metric",
+		"name": "Tunisia",
+		"prefix": "+216",
+		"continent": "Africa",
+		"native": "تونس"
+	},
+	"TO": {
+		"currency": "TOP",
+		"locales": ["to-TO", "en-TO"],
+		"measurement": "metric",
+		"name": "Tonga",
+		"prefix": "+676",
+		"continent": "Oceania",
+		"native": "Tonga"
+	},
+	"TR": {
+		"currency": "TRY",
+		"locales": ["tr-TR"],
+		"measurement": "metric",
+		"name": "Turkey",
+		"prefix": "+90",
+		"continent": "Asia",
+		"native": "Türkiye"
+	},
+	"TT": {
+		"currency": "TTD",
+		"locales": ["en-TT"],
+		"measurement": "metric",
+		"name": "Trinidad and Tobago",
+		"prefix": "+1 868",
+		"continent": "North America",
+		"native": "Trinidad and Tobago"
+	},
+	"TV": {
+		"currency": "AUD",
+		"locales": ["en-TV"],
+		"measurement": "metric",
+		"name": "Tuvalu",
+		"prefix": "+688",
+		"continent": "Oceania",
+		"native": "Tuvalu"
+	},
+	"TW": {
+		"currency": "TWD",
+		"locales": ["zh-Hant-TW"],
+		"measurement": "metric",
+		"name": "Taiwan",
+		"prefix": "+886",
+		"continent": "Asia",
+		"native": "臺灣/台灣"
+	},
+	"TZ": {
+		"currency": "TZS",
+		"locales": [
+			"asa-TZ",
+			"bez-TZ",
+			"en-TZ",
+			"jmc-TZ",
+			"kde-TZ",
+			"ksb-TZ",
+			"lag-TZ",
+			"mas-TZ",
+			"rof-TZ",
+			"rwk-TZ",
+			"sbp-TZ",
+			"sw-TZ",
+			"vun-TZ"
+		],
+		"measurement": "metric",
+		"name": "Tanzania",
+		"prefix": "+255",
+		"continent": "Africa",
+		"native": "Tanzania"
+	},
+	"UA": {
+		"currency": "UAH",
+		"locales": ["ru-UA", "uk-UA"],
+		"measurement": "metric",
+		"name": "Ukraine",
+		"prefix": "+380",
+		"continent": "Europe",
+		"native": "Україна"
+	},
+	"UG": {
+		"currency": "UGX",
+		"locales": [
+			"cgg-UG",
+			"en-UG",
+			"lg-UG",
+			"nyn-UG",
+			"sw-UG",
+			"teo-UG",
+			"xog-UG"
+		],
+		"measurement": "metric",
+		"name": "Uganda",
+		"prefix": "+256",
+		"continent": "Africa",
+		"native": "Uganda"
+	},
+	"UM": {
+		"currency": "USD",
+		"locales": ["en-UM"],
+		"measurement": "metric",
+		"name": "United States Minor Outlying Islands",
+		"prefix": "+1",
+		"continent": "Oceania",
+		"native": "United States Minor Outlying Islands"
+	},
+	"US": {
+		"currency": "USD",
+		"locales": ["en-US", "chr-US", "es-US", "haw-US", "lkt-US"],
+		"measurement": "customary",
+		"name": "United States",
+		"prefix": "+1",
+		"continent": "North America",
+		"native": "United States"
+	},
+	"UY": {
+		"currency": "UYU",
+		"locales": ["es-UY"],
+		"measurement": "metric",
+		"name": "Uruguay",
+		"prefix": "+598",
+		"continent": "South America",
+		"native": "Uruguay"
+	},
+	"UZ": {
+		"currency": "UZS",
+		"locales": ["uz-Cyrl-UZ", "uz-Latn-UZ"],
+		"measurement": "metric",
+		"name": "Uzbekistan",
+		"prefix": "+998",
+		"continent": "Asia",
+		"native": "Ўзбекистон"
+	},
+	"VA": {
+		"currency": "EUR",
+		"locales": ["it-VA"],
+		"measurement": "metric",
+		"name": "Vatican City",
+		"prefix": "+379",
+		"continent": "Europe",
+		"native": "Città del Vaticano"
+	},
+	"VC": {
+		"currency": "XCD",
+		"locales": ["en-VC"],
+		"measurement": "metric",
+		"name": "Saint Vincent and the Grenadines",
+		"prefix": "+1 784",
+		"continent": "North America",
+		"native": "Saint Vincent and the Grenadines"
+	},
+	"VE": {
+		"currency": "VEF",
+		"locales": ["es-VE"],
+		"measurement": "metric",
+		"name": "Venezuela",
+		"prefix": "+58",
+		"continent": "South America",
+		"native": "Venezuela"
+	},
+	"VG": {
+		"currency": "USD",
+		"locales": ["en-VG"],
+		"measurement": "metric",
+		"name": "British Virgin Islands",
+		"prefix": "+1 284",
+		"continent": "North America",
+		"native": "British Virgin Islands"
+	},
+	"VI": {
+		"currency": "USD",
+		"locales": ["en-VI"],
+		"measurement": "metric",
+		"name": "United States Virgin Islands",
+		"prefix": "+1 340",
+		"continent": "North America",
+		"native": "United States Virgin Islands"
+	},
+	"VN": {
+		"currency": "VND",
+		"locales": ["vi-VN"],
+		"measurement": "metric",
+		"name": "Vietnam",
+		"prefix": "+84",
+		"continent": "Asia",
+		"native": "Việt Nam"
+	},
+	"VU": {
+		"currency": "VUV",
+		"locales": ["en-VU", "fr-VU"],
+		"measurement": "metric",
+		"name": "Vanuatu",
+		"prefix": "+678",
+		"continent": "Oceania",
+		"native": "Vanuatu"
+	},
+	"WF": {
+		"currency": "XPF",
+		"locales": ["fr-WF"],
+		"measurement": "metric",
+		"name": "Wallis and Futuna",
+		"prefix": "+681",
+		"continent": "Oceania",
+		"native": "Wallis-et-Futuna"
+	},
+	"WS": {
+		"currency": "WST",
+		"locales": ["en-WS"],
+		"measurement": "metric",
+		"name": "Samoa",
+		"prefix": "+685",
+		"continent": "Oceania",
+		"native": "Samoa"
+	},
+	"YE": {
+		"currency": "YER",
+		"locales": ["ar-YE"],
+		"measurement": "metric",
+		"name": "Yemen",
+		"prefix": "+967",
+		"continent": "Asia",
+		"native": "اليمن"
+	},
+	"YT": {
+		"currency": "EUR",
+		"locales": ["fr-YT"],
+		"measurement": "metric",
+		"name": "Mayotte",
+		"prefix": "+262",
+		"continent": "Africa",
+		"native": "Mayotte"
+	},
+	"ZA": {
+		"currency": "ZAR",
+		"locales": ["af-ZA", "en-ZA", "zu-ZA"],
+		"measurement": "metric",
+		"name": "South Africa",
+		"prefix": "+27",
+		"continent": "Africa",
+		"native": "Suid-Afrika"
+	},
+	"ZM": {
+		"currency": "ZMW",
+		"locales": ["bem-ZM", "en-ZM"],
+		"measurement": "metric",
+		"name": "Zambia",
+		"prefix": "+260",
+		"continent": "Africa",
+		"native": "Zambia"
+	},
+	"ZW": {
+		"currency": "USD",
+		"locales": ["en-ZW", "nd-ZW", "sn-ZW"],
+		"measurement": "metric",
+		"name": "Zimbabwe",
+		"prefix": "+263",
+		"continent": "Africa",
+		"native": "Zimbabwe"
+	},
+	"GS": {
+		"currency": "GBP",
+		"locales": ["en-GS"],
+		"measurement": "metric",
+		"name": "South Georgia and the South Sandwich Islands",
+		"prefix": "+500",
+		"continent": "Antarctica",
+		"native": "South Georgia and the South Sandwich Islands"
+	},
+	"TM": {
+		"currency": "TMT",
+		"locales": ["tk-TM"],
+		"measurement": "metric",
+		"name": "Turkmenistan",
+		"prefix": "+993",
+		"continent": "Asia",
+		"native": "Türkmenistan"
+	},
+	"MV": {
+		"currency": "MVR",
+		"locales": ["dv-MV, en-MV"],
+		"measurement": "metric",
+		"name": "Maldives",
+		"prefix": "+960",
+		"continent": "Asia",
+		"native": "Dhivehi Raajje"
+	},
+	"TF": {
+		"currency": "EUR",
+		"locales": ["fr-TF"],
+		"measurement": "metric",
+		"name": "French Southern and Antarctic Lands",
+		"prefix": "+33",
+		"continent": "Antarctica",
+		"native": "Terre australes et antarctiques françaises"
+	},
+	"RE": {
+		"currency": "EUR",
+		"locales": ["fr-RE"],
+		"measurement": "metric",
+		"name": "Réunion",
+		"prefix": "+262",
+		"continent": "Africa",
+		"native": "Réunion"
+	},
+	"AQ": {
+		"currency": "USD",
+		"locales": ["en-AQ"],
+		"measurement": "metric",
+		"name": "Antarctica",
+		"prefix": "+672",
+		"continent": "Antarctica",
+		"native": "Antarctica"
+	}
+}

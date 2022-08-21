@@ -1,5 +1,3 @@
-import type { Timezone } from "../../types/input"
-
 export function getExtension(path: string) {
 	const index = path.lastIndexOf(".")
 	if (index < 0) return undefined
@@ -17,9 +15,16 @@ export function isBrowser() {
 }
 
 export function getBrowserTimezone() {
-	const error = new Error(
-		"`getBrowserTimezone` must be called in the browser."
-	)
-	if (!isBrowser()) throw error
-	return Intl.DateTimeFormat().resolvedOptions().timeZone as Timezone
+	if (!isBrowser()) {
+		throw new Error(
+			"`getBrowserTimezone` must exclusively be called in the browser."
+		)
+	}
+	return Intl.DateTimeFormat().resolvedOptions().timeZone
+}
+
+export function getLocaleLanguageCode(locale: string) {
+	const i = locale.indexOf("-")
+	if (i > -1) return locale.substring(0, i)
+	return undefined
 }

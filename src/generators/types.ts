@@ -1,28 +1,80 @@
-import countryTimezones from "../static/base/timezone-country-code.json"
-import countries from "../static/base/countries.json"
-import currencies from "../static/base/currencies.json"
-import { getArrayItemProperties } from "../functions/parsing"
-import { generateUnionTypesFile } from "../functions/file/generation"
+import countries from "../../json/countries.json"
+import currencies from "../../json/currencies.json"
+import languages from "../../json/languages.json"
+import timezones from "../../json/timezones.json"
 import paths from "../paths"
+import {
+	getArrayItemStringProperties,
+	generateUnionTypesFile,
+} from "../functions/generation"
 
-const { CountryCode, Timezone } = getArrayItemProperties(countryTimezones, [
-	{ saveAs: "CountryCode", fn: o => o.countryCode },
-	{ saveAs: "Timezone", fn: o => o.timezone },
+const countryEntries = Object.entries(countries)
+const {
+	countryCodes,
+	countryMeasurements,
+	countryNames,
+	countryPrefixes,
+	countryContinents,
+	countryNativeNames,
+} = getArrayItemStringProperties(countryEntries, [
+	{ saveAs: "countryCodes", fn: ([code]) => code },
+	{
+		saveAs: "countryMeasurements",
+		fn: ([_, country]) => country.measurement,
+	},
+	{ saveAs: "countryNames", fn: ([_, country]) => country.name },
+	{ saveAs: "countryPrefixes", fn: ([_, country]) => country.prefix },
+	{
+		saveAs: "countryContinents",
+		fn: ([_, country]) => country.continent,
+	},
+	{ saveAs: "countryNativeNames", fn: ([_, country]) => country.native },
 ])
-const { CountryName, CountryContinent } = getArrayItemProperties(countries, [
-	{ saveAs: "CountryName", fn: o => o.countryName },
-	{ saveAs: "CountryContinent", fn: o => o.continentName },
-])
-const { CurrencyCode, CurrencyName } = getArrayItemProperties(currencies, [
-	{ saveAs: "CurrencyCode", fn: o => o.currencyCode },
-	{ saveAs: "CurrencyName", fn: o => o.currencyName },
+const countryLocales = countryEntries.reduce(
+	(prev, [_, country]) => [...prev, ...country.locales],
+	[] as string[]
+)
+
+const { currencyCodes, currencySymbols, currencyNames } =
+	getArrayItemStringProperties(Object.entries(currencies), [
+		{ saveAs: "currencyCodes", fn: ([code]) => code },
+		{ saveAs: "currencySymbols", fn: ([_, currency]) => currency.symbol },
+		{ saveAs: "currencyNames", fn: ([_, currency]) => currency.name },
+	])
+
+const languageEntries = Object.entries(languages)
+const { languageCodes, languageNames, languageNativeNames } =
+	getArrayItemStringProperties(languageEntries, [
+		{ saveAs: "languageCodes", fn: ([code]) => code },
+		{ saveAs: "languageNames", fn: ([_, language]) => language.name },
+		{
+			saveAs: "languageNativeNames",
+			fn: ([_, language]) => language.native,
+		},
+	])
+const languageScripts = languageEntries.reduce(
+	(prev, [_, language]) => [...prev, ...language.scripts],
+	[] as string[]
+)
+
+const { tzs } = getArrayItemStringProperties(Object.entries(timezones), [
+	{ saveAs: "tzs", fn: ([timezone]) => timezone },
 ])
 
 generateUnionTypesFile(paths.output.types, [
-	{ name: "CountryCode", values: CountryCode },
-	{ name: "Timezone", values: Timezone },
-	{ name: "CountryName", values: CountryName },
-	{ name: "CountryContinent", values: CountryContinent },
-	{ name: "CurrencyCode", values: CurrencyCode },
-	{ name: "CurrencyName", values: CurrencyName },
+	{ name: "CountryCode", values: countryCodes },
+	{ name: "CountryMeasurement", values: countryMeasurements },
+	{ name: "CountryName", values: countryNames },
+	{ name: "CountryPhonePrefix", values: countryPrefixes },
+	{ name: "CountryContinent", values: countryContinents },
+	{ name: "CountryNativeName", values: countryNativeNames },
+	{ name: "CountryLocale", values: countryLocales },
+	{ name: "CurrencyCode", values: currencyCodes },
+	{ name: "CurrencySymbol", values: currencySymbols },
+	{ name: "CurrencyName", values: currencyNames },
+	{ name: "LanguageCode", values: languageCodes },
+	{ name: "LanguageName", values: languageNames },
+	{ name: "LanguageNativeName", values: languageNativeNames },
+	{ name: "LanguageScript", values: languageScripts },
+	{ name: "Timezone", values: tzs },
 ])
