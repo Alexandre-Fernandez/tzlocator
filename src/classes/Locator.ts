@@ -1,4 +1,5 @@
 import countries from "../../json/countries.json"
+import { getLocaleLanguageCode } from "../functions/utilities"
 import type {
 	CountryCode,
 	CountryContinent,
@@ -8,7 +9,6 @@ import type {
 	CountryNativeName,
 	CountryPhonePrefix,
 	CurrencyCode,
-	LanguageCode,
 } from "../types/base"
 import type { LiteralUnion } from "../types/utilities"
 import Currency from "./Currency"
@@ -61,12 +61,19 @@ class Locator {
 
 	getLanguages() {
 		return this.locales.reduce((prev, locale) => {
-			const i = locale.indexOf("-")
-			if (i > -1) {
-				prev.push(new Language(locale.substring(0, i) as LanguageCode))
-			}
+			const lang = getLocaleLanguageCode(locale)
+			if (lang) prev.push(new Language(lang))
 			return prev
 		}, [] as Language[])
+	}
+
+	getMainLocale() {
+		return this.locales[0]
+	}
+
+	getMainLanguage() {
+		const lang = getLocaleLanguageCode(this.getMainLocale())!
+		return new Language(lang)
 	}
 }
 

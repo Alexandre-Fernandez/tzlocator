@@ -22,3 +22,9 @@ export function getBrowserTimezone() {
 	}
 	return Intl.DateTimeFormat().resolvedOptions().timeZone
 }
+
+export function getLocaleLanguageCode(locale: string) {
+	const i = locale.indexOf("-")
+	if (i > -1) return locale.substring(0, i)
+	return undefined
+}
