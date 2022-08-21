@@ -25,6 +25,8 @@
 		"no-param-reassign": [2, { "props": false }],
 		"no-shadow": "off",
 		"no-continue": "off",
+		"no-underscore-dangle": "off",
+		"class-methods-use-this": "off",
 		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/ban-types": "off"
