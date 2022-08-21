@@ -35,7 +35,7 @@ class Tzlocator {
 		if (!config) return
 		if (config.include) this.includers = config.include
 		if (config.exclude) this.excluders = config.exclude
-		this.fallback = config.fallback ? this.get(config.fallback) : undefined
+		this.fallback = this._getUnvalidated(config.fallback)
 	}
 
 	/**
@@ -52,7 +52,7 @@ class Tzlocator {
 		}
 
 		const locator = new Locator(timezones[timezone] as CountryCode)
-		if (this.isValid(locator)) return locator
+		if (this._isValid(locator)) return locator
 		if (useFallback && this.fallback) return this.fallback
 		return undefined
 	}
@@ -113,20 +113,26 @@ class Tzlocator {
 		}, [] as Locator[])
 	}
 
-	private isValid(locator: Locator, useCache = true) {
+	private _getUnvalidated(timezone?: LiteralUnion<Timezone>) {
+		if (!timezone) return undefined
+		if (!Tzlocator.exists(timezone)) return undefined
+		return new Locator(timezones[timezone] as CountryCode)
+	}
+
+	private _isValid(locator: Locator, useCache = true) {
 		if (this.validLocatorsCache[locator.code]) return true
-		if (this.isIncluded(locator) && !this.isExcluded(locator)) {
+		if (this._isIncluded(locator) && !this._isExcluded(locator)) {
 			if (useCache) this.validLocatorsCache[locator.code] = true
 			return true
 		}
 		return false
 	}
 
-	private isIncluded(locator: Locator) {
+	private _isIncluded(locator: Locator) {
 		return this.includers.every(includer => includer(locator))
 	}
 
-	private isExcluded(locator: Locator) {
+	private _isExcluded(locator: Locator) {
 		return this.excluders.some(excluder => excluder(locator))
 	}
 }
