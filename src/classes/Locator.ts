@@ -59,6 +59,9 @@ class Locator {
 		)
 	}
 
+	/**
+	 * Returns the languages corresponding to each locale.
+	 */
 	getLanguages() {
 		return this.locales.reduce((prev, locale) => {
 			const lang = getLocaleLanguageCode(locale)
@@ -67,10 +70,16 @@ class Locator {
 		}, [] as Language[])
 	}
 
+	/**
+	 * Returns the main locale for this country.
+	 */
 	getMainLocale() {
 		return this.locales[0]
 	}
 
+	/**
+	 * Returns the main language for this country.
+	 */
 	getMainLanguage() {
 		const lang = getLocaleLanguageCode(this.getMainLocale())!
 		return new Language(lang)
