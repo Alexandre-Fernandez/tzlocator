@@ -32,14 +32,10 @@ pnpm add tzlocator
 #### Single page application
 
 ```ts
-import { getTzlocator, getBrowserTimezone } from "tzlocator"
+import { Tzlocator, getBrowserTimezone } from "tzlocator"
 
-// returns the browser's timezone, e.g. "Europe/London"
-const timezone = getBrowserTimezone()
-
-// returns an instance of tzlocator
-const tzlocator = getTzlocator("Europe/London" /* optional fallback timezone */)
-const timezoneData = tzlocator.get(timezone)
+const tzlocator = new TzLocator()
+const location = tzlocator.get(getBrowserTimezone())
 ```
 
 #### Server side rendering
@@ -48,7 +44,6 @@ const timezoneData = tzlocator.get(timezone)
 import { getBrowserTimezone } from "tzlocator"
 
 const timezone = getBrowserTimezone()
-
 // send the timezone to the server
 document.cookie = `timezone=${timezone};`
 ```
@@ -58,9 +53,9 @@ document.cookie = `timezone=${timezone};`
 ```ts
 import { getTzlocator } from "tzlocator"
 
-const tzlocator = getTzlocator()
+const tzlocator = new TzLocator()
 
-function getTimezoneData(request: Request) {
+function getLocation(request: Request) {
 	// retrieves the browser's timezone from a cookie
 	const cookies = getRequestCookies(request)
 	return tzlocator.get(cookies.timezone)
@@ -69,6 +64,5 @@ function getTimezoneData(request: Request) {
 
 ## Thanks
 
--   [Tiago de Almeida](https://gist.github.com/tiagodealmeida/0b97ccf117252d742dddf098bc6cc58a)
 -   [IANA](https://data.iana.org/time-zones/releases/)
--   [Mutually Human](https://github.com/mhs/world-currencies/blob/master/currencies.json)
+-   [Wikipedia](https://www.wikipedia.org/)
