@@ -195,8 +195,8 @@ class Currency {
 
 ## Language
 
-Currency information class.
-Can be instanciated using a currency code (e.g. `en`).
+Language information class.
+Can be instanciated using a language code (e.g. `en`).
 
 ```ts
 class Language {
