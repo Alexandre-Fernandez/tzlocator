@@ -51,7 +51,8 @@ document.cookie = `timezone=${timezone};`
 ### Server
 
 ```ts
-import { getTzlocator } from "tzlocator"
+import { getRequestCookies } from "my-project"
+import { Tzlocator } from "tzlocator"
 
 const tzlocator = new TzLocator()
 
