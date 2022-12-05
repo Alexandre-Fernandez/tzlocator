@@ -25,7 +25,7 @@ pnpm add tzlocator
 
 ## Usage
 
--   Star the [github repo](https://github.com/tzlocator/tzlocator) 😎
+-   Star the [github repo](https://github.com/alexandre-fernandez/tzlocator) 😎
 
 ### Browser
 
